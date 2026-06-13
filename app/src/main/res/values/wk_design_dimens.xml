@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- WittyKeys UI Design Dimensions - Legacy entries (non-duplicate) -->
+<!-- Primary dimensions now in wk_dimens.xml -->
+<resources>
+
+    <!-- ============================================== -->
+    <!-- ICON DIMENSIONS -->
+    <!-- ============================================== -->
+    <dimen name="wk_icon_button_size">36dp</dimen>
+    <dimen name="wk_icon_size">24dp</dimen>
+    <dimen name="wk_emoji_icon_size">20dp</dimen>
+
+    <!-- ============================================== -->
+    <!-- AI CTA BUTTON DIMENSIONS (Row 1) -->
+    <!-- ============================================== -->
+    <dimen name="wk_cta_button_height">28dp</dimen>
+    <dimen name="wk_cta_button_padding_v">5dp</dimen>
+    <dimen name="wk_cta_button_padding_h">12dp</dimen>
+    <dimen name="wk_cta_button_radius">16dp</dimen>
+
+    <!-- ============================================== -->
+    <!-- REPLY CHIP DIMENSIONS (Row 2) -->
+    <!-- ============================================== -->
+    <dimen name="wk_chip_height">34dp</dimen>
+    <dimen name="wk_chip_padding_v">7dp</dimen>
+    <dimen name="wk_chip_padding_h">14dp</dimen>
+    <dimen name="wk_chip_border_width">1dp</dimen>
+
+    <!-- ============================================== -->
+    <!-- TONE PICKER CHIP DIMENSIONS -->
+    <!-- ============================================== -->
+    <dimen name="wk_tone_chip_padding_v">5dp</dimen>
+    <dimen name="wk_tone_chip_padding_h">12dp</dimen>
+    <dimen name="wk_tone_underline_height">2dp</dimen>
+
+    <!-- ============================================== -->
+    <!-- LANGUAGE PICKER CHIP DIMENSIONS -->
+    <!-- ============================================== -->
+    <dimen name="wk_lang_chip_padding_v">6dp</dimen>
+    <dimen name="wk_lang_chip_padding_h">14dp</dimen>
+
+    <!-- ============================================== -->
+    <!-- STAT CARD DIMENSIONS -->
+    <!-- ============================================== -->
+    <dimen name="wk_stat_card_min_width">78dp</dimen>
+    <dimen name="wk_stat_card_max_width">96dp</dimen>
+    <dimen name="wk_stat_card_padding_v">8dp</dimen>
+    <dimen name="wk_stat_card_padding_h">10dp</dimen>
+    <dimen name="wk_stat_top_bar_height">2dp</dimen>
+
+    <!-- ============================================== -->
+    <!-- ACTION BUTTON DIMENSIONS -->
+    <!-- ============================================== -->
+    <dimen name="wk_action_button_radius">12dp</dimen>
+    <dimen name="wk_generate_button_radius">14dp</dimen>
+
+    <!-- ============================================== -->
+    <!-- BOTTOM SHEET DIMENSIONS -->
+    <!-- ============================================== -->
+    <dimen name="wk_bottom_sheet_radius">20dp</dimen>
+    <dimen name="wk_sheet_handle_width">36dp</dimen>
+    <dimen name="wk_sheet_handle_height">4dp</dimen>
+    <dimen name="wk_sheet_back_button_size">32dp</dimen>
+
+    <!-- ============================================== -->
+    <!-- CONSENT SHEET DIMENSIONS -->
+    <!-- ============================================== -->
+    <dimen name="wk_feature_card_radius">12dp</dimen>
+
+    <!-- ============================================== -->
+    <!-- SPACING VALUES -->
+    <!-- ============================================== -->
+    <dimen name="wk_row2_chip_gap">6dp</dimen>
+    <dimen name="wk_outer_padding">4dp</dimen>
+    <dimen name="wk_row2_padding">8dp</dimen>
+    <dimen name="wk_mv_scroll_margin">40dp</dimen>
+
+    <!-- ============================================== -->
+    <!-- MEMORY VIEW DIMENSIONS -->
+    <!-- ============================================== -->
+    <dimen name="wk_mv_reply_card_radius">12dp</dimen>
+    <dimen name="wk_mv_card_radius">12dp</dimen>
+    <dimen name="wk_mv_reply_card_padding">10dp</dimen>
+    <dimen name="wk_mv_loading_dot_size">6dp</dimen>
+    <dimen name="wk_badge_radius">8dp</dimen>
+    <dimen name="wk_modal_radius">20dp</dimen>
+
+    <!-- ============================================== -->
+    <!-- SHIMMER CHIP DIMENSIONS -->
+    <!-- ============================================== -->
+    <dimen name="wk_shimmer_chip_long">180dp</dimen>
+    <dimen name="wk_shimmer_chip_medium">140dp</dimen>
+    <dimen name="wk_shimmer_chip_short">100dp</dimen>
+
+    <!-- ============================================== -->
+    <!-- TOUCH TARGET (Accessibility minimum) -->
+    <!-- ============================================== -->
+    <dimen name="wk_min_touch_target">44dp</dimen>
+
+    <!-- ============================================== -->
+    <!-- LAUNCH THEME CARDS -->
+    <!-- ============================================== -->
+    <dimen name="wk_app_card_radius">18dp</dimen>
+    <dimen name="wk_app_card_radius_large">24dp</dimen>
+    <dimen name="wk_app_card_padding">14dp</dimen>
+    <dimen name="wk_app_row_gap">8dp</dimen>
+    <dimen name="wk_app_search_height">46dp</dimen>
+
+    <!-- ============================================== -->
+    <!-- TYPOGRAPHY SIZES -->
+    <!-- ============================================== -->
+    <dimen name="wk_text_cta">12sp</dimen>
+    <dimen name="wk_text_chip">12sp</dimen>
+    <dimen name="wk_text_mv_summary">11sp</dimen>
+    <dimen name="wk_text_mv_reply">12sp</dimen>
+    <dimen name="wk_text_emotion_badge">10sp</dimen>
+    <dimen name="wk_text_hint">12sp</dimen>
+    <dimen name="wk_text_stat_number">18sp</dimen>
+    <dimen name="wk_text_stat_label">7sp</dimen>
+    <dimen name="wk_text_sheet_title">15sp</dimen>
+    <dimen name="wk_text_consent_title">17sp</dimen>
+    <dimen name="wk_text_hinglish_badge">8sp</dimen>
+    <dimen name="wk_text_scroll_hint">10sp</dimen>
+
+</resources>

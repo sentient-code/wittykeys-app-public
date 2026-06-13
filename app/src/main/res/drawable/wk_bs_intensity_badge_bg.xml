@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Emotion intensity badge bg: rgba(249,115,22,0.12) -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="#1FF97316" />
+    <corners android:radius="6dp" />
+</shape>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/third_app_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/action_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="16dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="About Us"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/primary_app_color"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/about_us_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="We are a dedicated team of developers and AI enthusiasts transforming the way you communicate with our innovative AI-powered keyboard app. Packed with features like real-time language translation, Google Search integration, smart suggestions, emojis, GIFs, and AI image generation, our app makes typing smarter and more intuitive."
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/secondary_app_color" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Follow Us"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/primary_app_color"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/instagram_icon"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_marginEnd="20dp"
+                    android:clickable="true"
+                    android:contentDescription="Facebook"
+                    android:focusable="true"
+                    android:src="@drawable/instagram_icon" />
+
+                <ImageView
+                    android:id="@+id/youtube_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="20dp"
+                    android:clickable="true"
+                    android:contentDescription="Twitter"
+                    android:focusable="true"
+                    android:src="@drawable/youtube" />
+
+                <ImageView
+                    android:id="@+id/facebook_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:clickable="true"
+                    android:contentDescription="Instagram"
+                    android:focusable="true"
+                    android:src="@drawable/social_icon" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Rate Us"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/primary_app_color"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Love Witty Keys? Leave us a review!"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/secondary_app_color" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/rate_app_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="16dp"
+                android:backgroundTint="@color/secondary_app_color"
+                android:paddingHorizontal="20dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="Rate this App"
+                android:textAllCaps="false"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/third_app_color"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                app:icon="@drawable/rating_icon"
+                app:iconTint="@color/third_app_color"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.WittyKeys.Button.Circle" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

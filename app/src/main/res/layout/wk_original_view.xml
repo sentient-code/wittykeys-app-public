@@ -1,0 +1,924 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/wk_ov_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- ═══ ROW 1 (48dp fixed) ═══ -->
+    <!-- Mockup: .ov-row1 { height:48px; display:flex; align-items:center; padding:0 8px; gap:3px; border-bottom:1px solid rgba(255,255,255,0.04); } -->
+    <LinearLayout
+        android:id="@+id/wk_ov_row1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/wk_row1_height"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/wk_bar_padding_horizontal"
+        android:paddingEnd="@dimen/wk_bar_padding_horizontal">
+
+        <!-- WittyKeys logo button (fixed-width, left edge) — always visible in both EXPANDED and COLLAPSED -->
+        <ImageView
+            android:id="@+id/wk_ov_brain"
+            android:layout_width="@dimen/wk_icon_btn_size"
+            android:layout_height="@dimen/wk_icon_btn_size"
+            android:gravity="center"
+            android:scaleType="centerInside"
+            android:padding="4dp"
+            android:src="@drawable/wk_logo_overlay"
+            android:contentDescription="Toggle floating overlay"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <!-- CTA buttons container (EXPANDED state) — hides in collapsed, brain stays visible -->
+        <LinearLayout
+            android:id="@+id/wk_ov_row1_cta_buttons"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- 💬 AI chip (equal weight) -->
+            <TextView
+                android:id="@+id/wk_ov_ai_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="2dp"
+                android:minHeight="@dimen/wk_ai_btn_min_height"
+                android:background="@drawable/wk_ai_btn_default"
+                android:paddingTop="@dimen/wk_ai_btn_padding_vertical"
+                android:paddingBottom="@dimen/wk_ai_btn_padding_vertical"
+                android:text="💬 AI"
+                android:textSize="@dimen/wk_ai_btn_text_size"
+                android:textColor="@color/wk_text2"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:singleLine="true"/>
+
+            <!-- 🎭 Tone chip (equal weight) -->
+            <TextView
+                android:id="@+id/wk_ov_tone_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:minHeight="@dimen/wk_ai_btn_min_height"
+                android:background="@drawable/wk_ai_btn_default"
+                android:paddingTop="@dimen/wk_ai_btn_padding_vertical"
+                android:paddingBottom="@dimen/wk_ai_btn_padding_vertical"
+                android:text="🎭 Tone"
+                android:textSize="@dimen/wk_ai_btn_text_size"
+                android:textColor="@color/wk_text2"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:singleLine="true"/>
+
+            <!-- ✍️ Grammar (icon-only 30dp circle) -->
+            <TextView
+                android:id="@+id/wk_ov_grammar_btn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:background="@drawable/wk_icon_circle_bg"
+                android:text="✍️"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <!-- 🌐 Translate (icon-only 30dp circle) -->
+            <TextView
+                android:id="@+id/wk_ov_translate_btn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:background="@drawable/wk_icon_circle_bg"
+                android:text="🌐"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <!-- › Collapse arrow (now BEFORE mic) — 28dp circle matching AI chip height -->
+            <TextView
+                android:id="@+id/wk_ov_collapse_btn"
+                android:layout_width="@dimen/wk_ai_btn_min_height"
+                android:layout_height="@dimen/wk_ai_btn_min_height"
+                android:layout_marginStart="2dp"
+                android:gravity="center"
+                android:text="›"
+                android:textSize="16sp"
+                android:textColor="@color/wk_accent"
+                android:textStyle="bold"
+                android:includeFontPadding="false"
+                android:paddingBottom="2dp"
+                android:background="@drawable/wk_collapse_btn_bg"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <!-- Mic/Dictation button (rightmost) -->
+            <ImageView
+                android:id="@+id/wk_ov_mic_btn"
+                android:layout_width="@dimen/wk_icon_btn_size"
+                android:layout_height="@dimen/wk_icon_btn_size"
+                android:layout_marginStart="2dp"
+                android:gravity="center"
+                android:padding="@dimen/wk_mic_icon_padding"
+                android:src="@drawable/wk_ic_mic_simple"
+                android:tint="@color/wk_text"
+                android:contentDescription="Voice input"
+                android:clickable="true"
+                android:focusable="true"/>
+        </LinearLayout>
+
+        <!-- Spacer (pushes predictions to center when EXPANDED) -->
+        <View
+            android:id="@+id/wk_ov_spacer_left"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <!-- Predictions container (visible in EXPANDED, centered) -->
+        <!-- Mockup: .ov-preds { flex:1; display:flex; justify-content:center; align-items:center; gap:2px; } -->
+        <LinearLayout
+            android:id="@+id/wk_ov_preds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <!-- Predictions + dividers added programmatically -->
+        </LinearLayout>
+
+        <View
+            android:id="@+id/wk_ov_spacer_right"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <!-- COLLAPSED state: ‹ expand btn + mic -->
+        <!-- ‹ Expand arrow (COLLAPSED → EXPANDED) — GONE in EXPANDED — 28dp circle matching chip height -->
+        <TextView
+            android:id="@+id/wk_ov_expand_btn"
+            android:layout_width="@dimen/wk_ai_btn_min_height"
+            android:layout_height="@dimen/wk_ai_btn_min_height"
+            android:gravity="center"
+            android:text="‹"
+            android:textSize="16sp"
+            android:textColor="@color/wk_accent"
+            android:textStyle="bold"
+            android:includeFontPadding="false"
+            android:paddingBottom="2dp"
+            android:background="@drawable/wk_collapse_btn_bg"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="gone"/>
+
+        <!-- Mic for COLLAPSED state — GONE in EXPANDED -->
+        <ImageView
+            android:id="@+id/wk_ov_mic_collapsed"
+            android:layout_width="@dimen/wk_icon_btn_size"
+            android:layout_height="@dimen/wk_icon_btn_size"
+            android:layout_marginStart="2dp"
+            android:gravity="center"
+            android:padding="@dimen/wk_mic_icon_padding"
+            android:src="@drawable/wk_ic_mic_simple"
+            android:tint="@color/wk_text"
+            android:contentDescription="Voice input"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <!-- Row 1/Row 2 divider -->
+    <View
+        android:id="@+id/wk_ov_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/wk_divider"/>
+
+    <!-- ═══ ROW 2 (48dp, flex:0, scrollable) ═══ -->
+    <!-- Mockup: .ov-row2 { height:48px; display:flex; align-items:center; padding:0 8px; gap:8px; overflow-x:auto; } -->
+    <!-- FrameLayout to swap between different Row 2 content states -->
+    <FrameLayout
+        android:id="@+id/wk_ov_row2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/wk_row2_height">
+
+        <!-- State A: Reply Chips (horizontal scroll) -->
+        <HorizontalScrollView
+            android:id="@+id/wk_ov_row2_chips"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:overScrollMode="never"
+            android:clipToPadding="false"
+            android:paddingStart="@dimen/wk_row2_padding_horizontal"
+            android:paddingEnd="@dimen/wk_row2_padding_horizontal">
+
+            <LinearLayout
+                android:id="@+id/wk_ov_row2_chips_container"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"/>
+            <!-- Chips added programmatically using wk_ov_reply_chip_item.xml -->
+        </HorizontalScrollView>
+
+        <!-- State B: Tone Picker -->
+        <HorizontalScrollView
+            android:id="@+id/wk_ov_row2_tone_picker"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:overScrollMode="never"
+            android:paddingStart="@dimen/wk_tone_picker_padding_horizontal"
+            android:paddingEnd="@dimen/wk_tone_picker_padding_horizontal"
+            android:paddingTop="@dimen/wk_tone_picker_padding_vertical"
+            android:paddingBottom="@dimen/wk_tone_picker_padding_vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/wk_ov_tone_chips_container"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"/>
+            <!-- Tone chips added programmatically -->
+        </HorizontalScrollView>
+
+        <!-- State C: Language Picker -->
+        <HorizontalScrollView
+            android:id="@+id/wk_ov_row2_lang_picker"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:overScrollMode="never"
+            android:paddingStart="@dimen/wk_tone_picker_padding_horizontal"
+            android:paddingEnd="@dimen/wk_tone_picker_padding_horizontal"
+            android:paddingTop="@dimen/wk_tone_picker_padding_vertical"
+            android:paddingBottom="@dimen/wk_tone_picker_padding_vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/wk_ov_lang_chips_container"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"/>
+        </HorizontalScrollView>
+
+        <!-- State D: Shimmer Loading -->
+        <!-- Mockup: .ov-row2-loading { display:flex; align-items:center; gap:8px; padding:0 12px; flex:1; } -->
+        <LinearLayout
+            android:id="@+id/wk_ov_row2_shimmer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/wk_shimmer_height"
+                android:layout_weight="1"
+                android:background="@drawable/wk_shimmer_gradient"
+                android:layout_marginEnd="8dp"/>
+            <View
+                android:layout_width="@dimen/wk_shimmer_short"
+                android:layout_height="@dimen/wk_shimmer_height"
+                android:background="@drawable/wk_shimmer_gradient"
+                android:layout_marginEnd="8dp"/>
+            <View
+                android:layout_width="@dimen/wk_shimmer_med"
+                android:layout_height="@dimen/wk_shimmer_height"
+                android:background="@drawable/wk_shimmer_gradient"/>
+        </LinearLayout>
+
+        <!-- State E: Error -->
+        <!-- Mockup: .ov-row2-error { display:flex; align-items:center; gap:8px; padding:0 12px; font-size:12px; } -->
+        <LinearLayout
+            android:id="@+id/wk_ov_row2_error"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/wk_ov_row2_error_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="❌ Unable to load smart replies."
+                android:textSize="12sp"
+                android:textColor="@color/wk_text2"/>
+
+            <Button
+                android:id="@+id/wk_ov_row2_error_retry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Retry"
+                android:textSize="11sp"
+                android:textColor="@color/wk_text"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium"
+                android:background="@drawable/wk_custom_btn_cancel"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:textAllCaps="false"/>
+
+            <TextView
+                android:id="@+id/wk_ov_error_use_ai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Use AI →"
+                android:textSize="11.5sp"
+                android:textColor="@color/wk_accent"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium"
+                android:background="@drawable/wk_error_use_ai_chip"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:layout_marginStart="4dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:textAllCaps="false"/>
+        </LinearLayout>
+
+        <!-- State F: Accessibility Prompt -->
+        <!-- Mockup: .ov-acc-prompt { display:flex; align-items:center; gap:8px; padding:0 12px; flex:1; } -->
+        <LinearLayout
+            android:id="@+id/wk_ov_row2_acc_prompt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/wk_ov_acc_lock_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🔓"
+                android:textSize="18sp"
+                android:layout_marginEnd="6dp"/>
+
+            <TextView
+                android:id="@+id/wk_ov_acc_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:textColor="@color/wk_text2"/>
+            <!-- Text set programmatically with SpannableString for "Enable" accent color -->
+
+            <Button
+                android:id="@+id/wk_ov_acc_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enable"
+                android:textSize="@dimen/wk_acc_btn_text_size"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium"
+                android:background="@drawable/wk_acc_btn_bg"
+                android:paddingTop="@dimen/wk_acc_btn_padding_vertical"
+                android:paddingBottom="@dimen/wk_acc_btn_padding_vertical"
+                android:paddingStart="@dimen/wk_acc_btn_padding_horizontal"
+                android:paddingEnd="@dimen/wk_acc_btn_padding_horizontal"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:textAllCaps="false"/>
+        </LinearLayout>
+
+        <!-- State G: Custom Mode (with InternalInputView for typing instructions) -->
+        <!-- Key events route to InternalInputView via LatinIME interception -->
+        <LinearLayout
+            android:id="@+id/wk_ov_row2_custom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:visibility="gone">
+
+            <project.witty.keys.keyboard.internal.InternalInputView
+                android:id="@+id/wk_ov_custom_input"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/wk_ov_custom_generate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Generate"
+                android:textSize="@dimen/wk_custom_btn_text_size"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium"
+                android:background="@drawable/wk_custom_btn_generate"
+                android:paddingTop="@dimen/wk_custom_btn_padding_vertical"
+                android:paddingBottom="@dimen/wk_custom_btn_padding_vertical"
+                android:paddingStart="@dimen/wk_custom_btn_padding_horizontal"
+                android:paddingEnd="@dimen/wk_custom_btn_padding_horizontal"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:textAllCaps="false"
+                android:layout_marginStart="6dp"/>
+
+            <TextView
+                android:id="@+id/wk_ov_custom_cancel"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:gravity="center"
+                android:text="✕"
+                android:textSize="14sp"
+                android:textColor="@color/wk_text2"
+                android:background="@drawable/wk_custom_btn_cancel_circle"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginStart="6dp"/>
+        </LinearLayout>
+
+        <!-- State H: Grammar Active Row (pinned chip + corrected text + apply/copy) -->
+        <LinearLayout
+            android:id="@+id/wk_ov_row2_grammar_active"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:visibility="gone">
+
+            <!-- Pinned grammar chip -->
+            <LinearLayout
+                android:id="@+id/wk_ov_grammar_pinned"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/wk_grammar_pinned_bg"
+                android:paddingStart="10dp"
+                android:paddingEnd="6dp"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp">
+
+                <TextView
+                    android:id="@+id/wk_ov_grammar_pinned_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:text="✓ Grammar"
+                    android:textSize="12sp"
+                    android:textColor="@color/wk_green"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium"
+                    android:singleLine="true"/>
+
+                <TextView
+                    android:id="@+id/wk_ov_grammar_pinned_close"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="6dp"
+                    android:text="✕"
+                    android:textSize="10sp"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/wk_text3"
+                    android:background="@drawable/wk_pinned_close_bg"
+                    android:clickable="true"
+                    android:focusable="true"/>
+            </LinearLayout>
+
+            <!-- Divider -->
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/wk_divider"/>
+
+            <!-- Result area (shimmer OR corrected text + Apply + Copy) -->
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <!-- Shimmer placeholder (shown during loading) -->
+                <LinearLayout
+                    android:id="@+id/wk_ov_grammar_shimmer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="4dp"
+                    android:visibility="visible">
+                    <View android:layout_width="0dp" android:layout_height="28dp"
+                        android:layout_weight="1" android:background="@drawable/wk_shimmer_bar"/>
+                </LinearLayout>
+
+                <!-- Corrected text + Apply + Copy (shown after API returns) -->
+                <LinearLayout
+                    android:id="@+id/wk_ov_grammar_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="4dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/wk_ov_grammar_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="12.5sp"
+                        android:textColor="@color/wk_text"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:paddingTop="7dp"
+                        android:paddingBottom="7dp"
+                        android:background="@drawable/wk_translate_result_chip_bg"/>
+
+                    <TextView
+                        android:id="@+id/wk_ov_grammar_apply"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:text="Apply ✓"
+                        android:textSize="11sp"
+                        android:textColor="#000000"
+                        android:fontFamily="sans-serif-medium"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="14dp"
+                        android:paddingTop="6dp"
+                        android:paddingBottom="6dp"
+                        android:background="@drawable/wk_apply_btn_bg"
+                        android:clickable="true"
+                        android:focusable="true"/>
+
+                    <TextView
+                        android:id="@+id/wk_ov_grammar_copy"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_marginStart="6dp"
+                        android:gravity="center"
+                        android:text="📋"
+                        android:textSize="14sp"
+                        android:background="@drawable/wk_copy_btn_bg"
+                        android:clickable="true"
+                        android:focusable="true"/>
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+
+        <!-- State I: Tone Active Row (pinned chip + suggestions + regen) -->
+        <!-- Mockup: .tone-active-row { display:flex; align-items:center; height:48px; gap:0; overflow:hidden; } -->
+        <LinearLayout
+            android:id="@+id/wk_ov_row2_tone_active"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <!-- Regen button (left side) -->
+            <TextView
+                android:id="@+id/wk_ov_regen_btn"
+                android:layout_width="@dimen/wk_regen_btn_size"
+                android:layout_height="@dimen/wk_regen_btn_size"
+                android:gravity="center"
+                android:text="🔄"
+                android:textSize="@dimen/wk_regen_btn_emoji_size"
+                android:background="@drawable/wk_regen_btn_bg"
+                android:layout_marginEnd="@dimen/wk_regen_btn_margin_end"
+                android:layout_marginStart="8dp"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <!-- Pinned tone chip (e.g. "😎 Casual ✕") -->
+            <LinearLayout
+                android:id="@+id/wk_ov_tone_pinned"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingTop="@dimen/wk_tone_pinned_padding_vertical"
+                android:paddingBottom="@dimen/wk_tone_pinned_padding_vertical"
+                android:paddingStart="@dimen/wk_tone_pinned_padding_horizontal"
+                android:paddingEnd="6dp"
+                android:layout_marginStart="@dimen/wk_tone_pinned_margin_start"
+                android:layout_marginEnd="@dimen/wk_tone_pinned_margin_end">
+                <!-- Background set programmatically based on tone color -->
+
+                <TextView
+                    android:id="@+id/wk_ov_tone_pinned_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:textSize="@dimen/wk_tone_pinned_text_size"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium"
+                    android:singleLine="true"/>
+
+                <!-- ✕ close button -->
+                <TextView
+                    android:id="@+id/wk_ov_tone_pinned_close"
+                    android:layout_width="@dimen/wk_tone_close_size"
+                    android:layout_height="@dimen/wk_tone_close_size"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="✕"
+                    android:textSize="@dimen/wk_tone_close_text_size"
+                    android:textColor="@color/wk_text2"
+                    android:background="@drawable/wk_pinned_close_bg"
+                    android:layout_marginStart="6dp"
+                    android:clickable="true"
+                    android:focusable="true"/>
+            </LinearLayout>
+
+            <!-- Divider line -->
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/wk_divider"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Tone suggestions area: shimmer (loading) OR actual suggestions -->
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <!-- Shimmer loading (visible during API call) -->
+                <LinearLayout
+                    android:id="@+id/wk_ov_tone_suggestions_shimmer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:visibility="gone">
+
+                    <View android:layout_width="0dp" android:layout_height="28dp"
+                        android:layout_weight="3" android:layout_marginEnd="6dp"
+                        android:background="@drawable/wk_shimmer_bar"/>
+                    <View android:layout_width="0dp" android:layout_height="28dp"
+                        android:layout_weight="2" android:layout_marginEnd="6dp"
+                        android:background="@drawable/wk_shimmer_bar"/>
+                    <View android:layout_width="0dp" android:layout_height="28dp"
+                        android:layout_weight="2"
+                        android:background="@drawable/wk_shimmer_bar"/>
+                </LinearLayout>
+
+                <!-- Actual suggestions (shown after API returns) -->
+                <HorizontalScrollView
+                    android:id="@+id/wk_ov_tone_suggestions_scroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none"
+                    android:overScrollMode="never"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:clipToPadding="false">
+
+                    <LinearLayout
+                        android:id="@+id/wk_ov_tone_suggestions_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"/>
+                </HorizontalScrollView>
+            </FrameLayout>
+        </LinearLayout>
+
+        <!-- State K: Translate Active Row (pinned lang + translated text + apply) -->
+        <LinearLayout
+            android:id="@+id/wk_ov_row2_translate_active"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:visibility="gone">
+
+            <!-- Pinned language chip -->
+            <LinearLayout
+                android:id="@+id/wk_ov_translate_pinned"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/wk_translate_pinned_bg"
+                android:paddingStart="10dp"
+                android:paddingEnd="6dp"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp">
+
+                <TextView
+                    android:id="@+id/wk_ov_translate_pinned_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:textSize="12sp"
+                    android:textColor="@color/wk_accent"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium"
+                    android:maxWidth="120dp"
+                    android:ellipsize="end"
+                    android:singleLine="true"/>
+
+                <TextView
+                    android:id="@+id/wk_ov_translate_pinned_close"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="6dp"
+                    android:text="✕"
+                    android:textSize="10sp"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/wk_text3"
+                    android:background="@drawable/wk_pinned_close_bg"
+                    android:clickable="true"
+                    android:focusable="true"/>
+            </LinearLayout>
+
+            <!-- Divider -->
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/wk_divider"/>
+
+            <!-- Result area (shimmer OR translated text + apply) -->
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <!-- Shimmer placeholder (shown during loading) -->
+                <LinearLayout
+                    android:id="@+id/wk_ov_translate_shimmer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="4dp"
+                    android:visibility="visible">
+                    <View android:layout_width="0dp" android:layout_height="28dp"
+                        android:layout_weight="1" android:background="@drawable/wk_shimmer_bar"/>
+                </LinearLayout>
+
+                <!-- Translated text + Apply button (shown after API returns) -->
+                <LinearLayout
+                    android:id="@+id/wk_ov_translate_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="4dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/wk_ov_translate_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="12.5sp"
+                        android:textColor="@color/wk_text"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:paddingTop="7dp"
+                        android:paddingBottom="7dp"
+                        android:background="@drawable/wk_translate_result_chip_bg"/>
+
+                    <TextView
+                        android:id="@+id/wk_ov_translate_apply"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:text="Apply ✓"
+                        android:textSize="11sp"
+                        android:textColor="#000000"
+                        android:fontFamily="sans-serif-medium"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="14dp"
+                        android:paddingTop="6dp"
+                        android:paddingBottom="6dp"
+                        android:background="@drawable/wk_apply_btn_bg"
+                        android:clickable="true"
+                        android:focusable="true"/>
+
+                    <TextView
+                        android:id="@+id/wk_ov_translate_copy"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_marginStart="6dp"
+                        android:gravity="center"
+                        android:text="📋"
+                        android:textSize="14sp"
+                        android:background="@drawable/wk_copy_btn_bg"
+                        android:clickable="true"
+                        android:focusable="true"/>
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+
+        <!-- State L: Stats Cards (horizontal scroll in Row 2) -->
+        <HorizontalScrollView
+            android:id="@+id/wk_ov_row2_stats"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:overScrollMode="never"
+            android:clipToPadding="false"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/wk_ov_row2_stats_container"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingStart="6dp"
+                android:paddingEnd="6dp"/>
+            <!-- Stat cards added programmatically using wk_stat_card_item.xml -->
+        </HorizontalScrollView>
+
+        <!-- State J: No Context hint -->
+        <LinearLayout
+            android:id="@+id/wk_ov_row2_no_context"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/wk_row2_padding_horizontal"
+            android:paddingEnd="@dimen/wk_row2_padding_horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/wk_ov_hint_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tap an AI feature above or start typing"
+                android:textSize="12sp"
+                android:textColor="@color/wk_text3"/>
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- Row 2 / Keyboard bottom divider -->
+    <View
+        android:id="@+id/wk_ov_bottom_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/wk_divider"/>
+
+    <!-- Gap between divider and keyboard keys -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"/>
+</LinearLayout>

@@ -1,0 +1,10 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="20dp"
+    android:height="20dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Smaller filled shift arrow (shifted/locked state) -->
+    <path
+        android:fillColor="#B0B0B0"
+        android:pathData="M12,5 L5,12 L8,12 L8,19 L16,19 L16,12 L19,12 Z"/>
+</vector>

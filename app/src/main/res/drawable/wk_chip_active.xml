@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Active/tapped state reply chip - green border flash matching mockup -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/wk_chip_active" />
+    <stroke
+        android:width="@dimen/wk_chip_border_width"
+        android:color="@color/wk_green_glow" />
+    <corners android:radius="@dimen/wk_chip_radius" />
+</shape>

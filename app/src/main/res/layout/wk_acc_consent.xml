@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- BS_ACC_CONSENT: Accessibility Consent Bottom Sheet (matches mockup) -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/consent_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:orientation="vertical"
+    android:background="@drawable/wk_bs_sheet_bg"
+    android:elevation="12dp">
+
+    <!-- ══════ HANDLE BAR ══════ -->
+    <View
+        android:id="@+id/consent_handle"
+        android:layout_width="@dimen/wk_bs_handle_width"
+        android:layout_height="@dimen/wk_bs_handle_height"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/wk_bs_handle" />
+
+    <!-- ══════ BODY (centered, scrollable) ══════ -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="16dp">
+
+            <!-- ══════ CONSENT ICON ══════ -->
+            <FrameLayout
+                android:layout_width="@dimen/wk_consent_icon_size"
+                android:layout_height="@dimen/wk_consent_icon_size"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/wk_consent_icon_bg">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/emoji_unlock"
+                    android:textSize="@dimen/wk_consent_icon_emoji_size" />
+
+            </FrameLayout>
+
+            <!-- ══════ TITLE ══════ -->
+            <TextView
+                android:id="@+id/consent_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enable Smart Assistant"
+                android:textSize="@dimen/wk_consent_title_size"
+                android:textStyle="bold"
+                android:textColor="@color/wk_text"
+                android:gravity="center"
+                android:letterSpacing="-0.01"
+                android:layout_marginTop="16dp" />
+
+            <!-- ══════ SUBTITLE ══════ -->
+            <TextView
+                android:id="@+id/consent_subtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="WittyKeys needs Accessibility access to read messages and provide smart suggestions"
+                android:textSize="@dimen/wk_consent_subtitle_size"
+                android:textColor="@color/wk_text2"
+                android:gravity="center"
+                android:lineSpacingMultiplier="1.5"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- ══════ FEATURE LIST ══════ -->
+            <LinearLayout
+                android:id="@+id/feature_cards_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="14dp">
+
+                <!-- Feature 1: Smart Replies (BLUE) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="top"
+                    android:background="@drawable/wk_feature_card_bg"
+                    android:padding="10dp"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:layout_width="@dimen/wk_feature_icon_size"
+                        android:layout_height="@dimen/wk_feature_icon_size"
+                        android:gravity="center"
+                        android:background="@drawable/wk_feature_icon_blue"
+                        android:text="@string/emoji_ai"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Smart Replies"
+                            android:textSize="@dimen/wk_feature_name_size"
+                            android:textStyle="bold"
+                            android:textColor="@color/wk_text" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Context-aware reply suggestions based on conversation"
+                            android:textSize="@dimen/wk_feature_desc_size"
+                            android:textColor="@color/wk_text2"
+                            android:lineSpacingMultiplier="1.4"
+                            android:layout_marginTop="2dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Feature 2: Emotional Context (PURPLE) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="top"
+                    android:background="@drawable/wk_feature_card_bg"
+                    android:padding="10dp"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:layout_width="@dimen/wk_feature_icon_size"
+                        android:layout_height="@dimen/wk_feature_icon_size"
+                        android:gravity="center"
+                        android:background="@drawable/wk_feature_icon_purple"
+                        android:text="@string/emoji_smile"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Emotional Context"
+                            android:textSize="@dimen/wk_feature_name_size"
+                            android:textStyle="bold"
+                            android:textColor="@color/wk_text" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Understand tone and emotion to craft better responses"
+                            android:textSize="@dimen/wk_feature_desc_size"
+                            android:textColor="@color/wk_text2"
+                            android:lineSpacingMultiplier="1.4"
+                            android:layout_marginTop="2dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Feature 3: Auto-Translation (GREEN) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="top"
+                    android:background="@drawable/wk_feature_card_bg"
+                    android:padding="10dp"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:layout_width="@dimen/wk_feature_icon_size"
+                        android:layout_height="@dimen/wk_feature_icon_size"
+                        android:gravity="center"
+                        android:background="@drawable/wk_feature_icon_green"
+                        android:text="@string/emoji_translate"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Auto-Translation"
+                            android:textSize="@dimen/wk_feature_name_size"
+                            android:textStyle="bold"
+                            android:textColor="@color/wk_text" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Translate messages and replies across languages seamlessly"
+                            android:textSize="@dimen/wk_feature_desc_size"
+                            android:textColor="@color/wk_text2"
+                            android:lineSpacingMultiplier="1.4"
+                            android:layout_marginTop="2dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Feature 4: Tone Suggestions (ORANGE) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="top"
+                    android:background="@drawable/wk_feature_card_bg"
+                    android:padding="10dp"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp">
+
+                    <TextView
+                        android:layout_width="@dimen/wk_feature_icon_size"
+                        android:layout_height="@dimen/wk_feature_icon_size"
+                        android:gravity="center"
+                        android:background="@drawable/wk_feature_icon_orange"
+                        android:text="@string/emoji_tone"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tone Suggestions"
+                            android:textSize="@dimen/wk_feature_name_size"
+                            android:textStyle="bold"
+                            android:textColor="@color/wk_text" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Adjust reply tone \u2014 professional, casual, friendly &amp; more"
+                            android:textSize="@dimen/wk_feature_desc_size"
+                            android:textColor="@color/wk_text2"
+                            android:lineSpacingMultiplier="1.4"
+                            android:layout_marginTop="2dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- ══════ PRIVACY NOTE ══════ -->
+            <LinearLayout
+                android:id="@+id/privacy_note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/wk_privacy_note_bg"
+                android:paddingTop="@dimen/wk_privacy_note_padding"
+                android:paddingBottom="@dimen/wk_privacy_note_padding"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:layout_marginBottom="14dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/emoji_shield"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Your data stays on device. WittyKeys never stores or shares your messages."
+                    android:textSize="11sp"
+                    android:textColor="@color/wk_green"
+                    android:lineSpacingMultiplier="1.4" />
+
+            </LinearLayout>
+
+            <!-- ══════ BUTTON ROW ══════ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="4dp">
+
+                <!-- Cancel/Not Now Button -->
+                <TextView
+                    android:id="@+id/btn_not_now"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/wk_min_touch_target"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="center"
+                    android:text="@string/not_now"
+                    android:textSize="@dimen/wk_bs_btn_text_size"
+                    android:textStyle="bold"
+                    android:textColor="@color/wk_text2"
+                    android:background="@drawable/wk_bs_btn_secondary"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <!-- Grant Permission Button -->
+                <TextView
+                    android:id="@+id/btn_enable"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/wk_min_touch_target"
+                    android:layout_weight="1"
+                    android:layout_marginStart="5dp"
+                    android:gravity="center"
+                    android:text="Grant Permission"
+                    android:textSize="@dimen/wk_bs_btn_text_size"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:background="@drawable/wk_bs_btn_primary"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,14 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/secondary_app_color" /> <!-- Define this color -->
+            <corners android:radius="8dp" /> <!-- Adjust radius -->
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/key_text_color_lxx_light" /> <!-- Define this color, e.g., your R.drawable.rounded_keyboard_button background -->
+            <corners android:radius="8dp" />
+        </shape>
+    </item>
+</selector>

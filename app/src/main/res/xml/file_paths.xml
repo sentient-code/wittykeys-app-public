@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!--
+      This tells the FileProvider that we are allowed to share files
+      from a subdirectory named "stickers" inside our app's cache directory.
+      This path MUST match the directory we use in our Java code.
+    -->
+    <cache-path name="stickers" path="stickers/" />
+</paths>

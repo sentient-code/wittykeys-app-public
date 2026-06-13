@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ═══ Base Colors (DARK theme — night mode) ═══ -->
+    <!-- wk_bg MUST match background_lxx_dark so SAB/emoji keyboard bg = QWERTY bg -->
+    <color name="wk_bg">#171719</color>
+    <color name="wk_surface">#1E1E21</color>
+    <color name="wk_surface2">#262629</color>
+    <color name="wk_surface3">#303035</color>
+    <color name="wk_surface4">#3A3A42</color>
+    <color name="wk_text">#F0F0F2</color>
+    <color name="wk_text2">#8A8A96</color>
+    <color name="wk_text3">#5A5A66</color>
+    <color name="wk_text_sec">@color/wk_text2</color>
+    <color name="wk_text_dim">@color/wk_text3</color>
+    <color name="wk_accent">#6CB4EE</color>
+    <color name="wk_accent2">#89C4F4</color>
+    <color name="wk_purple">#A78BFA</color>
+    <color name="wk_green">#4ADE80</color>
+    <color name="wk_orange">#FB923C</color>
+    <color name="wk_red">#F87171</color>
+    <color name="wk_pink">#F472B6</color>
+
+    <!-- ═══ Alpha/Glow Colors (white-based for dark backgrounds) ═══ -->
+    <!-- accent-glow: rgba(108,180,238,0.15) -->
+    <color name="wk_accent_glow">#266CB4EE</color>
+    <!-- accent-glow2: rgba(108,180,238,0.08) -->
+    <color name="wk_accent_glow2">#146CB4EE</color>
+    <!-- purple-glow: rgba(167,139,250,0.12) -->
+    <color name="wk_purple_glow">#1FA78BFA</color>
+    <!-- green-glow: rgba(74,222,128,0.12) -->
+    <color name="wk_green_glow">#1F4ADE80</color>
+    <!-- pink-glow: rgba(244,114,182,0.12) -->
+    <color name="wk_pink_glow">#1FF472B6</color>
+    <!-- chip-bg: rgba(255,255,255,0.06) -->
+    <color name="wk_chip_bg">#0FFFFFFF</color>
+    <!-- chip-border: rgba(255,255,255,0.08) -->
+    <color name="wk_chip_border">#14FFFFFF</color>
+    <!-- chip-hover: rgba(255,255,255,0.10) -->
+    <color name="wk_chip_hover">#1AFFFFFF</color>
+    <!-- chip-active: rgba(108,180,238,0.25) -->
+    <color name="wk_chip_active">#406CB4EE</color>
+    <!-- glass: rgba(255,255,255,0.04) -->
+    <color name="wk_glass">#0AFFFFFF</color>
+    <!-- glass-border: rgba(255,255,255,0.06) -->
+    <color name="wk_glass_border">#0FFFFFFF</color>
+
+    <!-- ═══ Border/Divider Colors (white-based for dark backgrounds) ═══ -->
+    <!-- Row 1/Row 2 border: rgba(255,255,255,0.04) -->
+    <color name="wk_divider">#0AFFFFFF</color>
+    <!-- AI button border: rgba(255,255,255,0.04) -->
+    <color name="wk_btn_border">#0AFFFFFF</color>
+    <!-- Arrow button border: rgba(255,255,255,0.06) -->
+    <color name="wk_arrow_border">#0FFFFFFF</color>
+    <!-- Smart bar top border: rgba(255,255,255,0.04) -->
+    <color name="wk_bar_top_border">#0AFFFFFF</color>
+
+    <!-- ═══ Special Colors ═══ -->
+    <color name="wk_overlay_bg">#8C000000</color>
+    <color name="wk_bs_gradient_top">#1C1C22</color>
+    <color name="wk_bs_gradient_bottom">#161619</color>
+    <!-- Bottom sheet top border: rgba(255,255,255,0.08) -->
+    <color name="wk_bs_border">#14FFFFFF</color>
+
+    <!-- v5 revamp: translucent tint overlays for badges and source tags -->
+    <color name="wk_purple_tint_badge">#1FA78BFA</color>   <!-- 12% A78BFA -->
+    <color name="wk_purple_tint_badge_stroke">#59A78BFA</color> <!-- 35% A78BFA -->
+    <color name="wk_accent_tint_tag">#596CB4EE</color>     <!-- 35% 6CB4EE -->
+    <color name="wk_purple_tint_tag">#59A78BFA</color>     <!-- 35% A78BFA -->
+    <color name="wk_cta_primary_top">#2E4ADE80</color>     <!-- 18% green top -->
+    <color name="wk_cta_primary_bot">#144ADE80</color>     <!-- 8% green bottom -->
+    <color name="wk_cta_primary_stroke">#474ADE80</color>  <!-- 28% green stroke -->
+</resources>

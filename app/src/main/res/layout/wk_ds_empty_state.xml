@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/wkEmptyIcon"
+            android:layout_width="@dimen/wk_ds_empty_icon"
+            android:layout_height="@dimen/wk_ds_empty_icon"
+            android:src="@drawable/ic_wk_sparkle"
+            android:layout_marginBottom="@dimen/wk_ds_empty_gap" />
+
+        <TextView
+            android:id="@+id/wkEmptyTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="?attr/wkText"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/wkEmptySub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/wk_text_sec"
+            android:gravity="center"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp" />
+
+        <project.witty.keys.ui.chat.WkDualCtaRow
+            android:id="@+id/wkEmptyCta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+    </LinearLayout>
+</merge>

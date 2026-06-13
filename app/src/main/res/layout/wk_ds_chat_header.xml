@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/wk_ds_header_height"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/wk_ds_header_padding_h"
+        android:paddingEnd="@dimen/wk_ds_header_padding_h"
+        android:background="@color/wk_bg">
+
+        <ImageView
+            android:id="@+id/wkHeaderBack"
+            android:layout_width="@dimen/wk_ds_icon_btn"
+            android:layout_height="@dimen/wk_ds_icon_btn"
+            android:padding="9dp"
+            android:src="@drawable/ic_wk_back"
+            android:background="@drawable/bg_wk_icon_btn"
+            android:contentDescription="@string/wk_ds_back_cd"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <View
+            android:id="@+id/wkHeaderDot"
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:layout_marginStart="4dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/wkHeaderTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="?attr/wkText"
+            android:ellipsize="end"
+            android:maxLines="1" />
+
+        <TextView
+            android:id="@+id/wkHeaderMeta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="11sp"
+            android:textColor="@color/wk_text_sec"
+            android:layout_marginEnd="8dp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/wkHeaderSessions"
+            android:layout_width="@dimen/wk_ds_icon_btn"
+            android:layout_height="@dimen/wk_ds_icon_btn"
+            android:padding="9dp"
+            android:src="@drawable/ic_wk_sessions"
+            android:background="@drawable/bg_wk_icon_btn"
+            android:contentDescription="@string/wk_ds_sessions_cd"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginEnd="4dp" />
+
+        <ImageView
+            android:id="@+id/wkHeaderClose"
+            android:layout_width="@dimen/wk_ds_icon_btn"
+            android:layout_height="@dimen/wk_ds_icon_btn"
+            android:padding="9dp"
+            android:src="@drawable/ic_wk_close"
+            android:background="@drawable/bg_wk_icon_btn"
+            android:contentDescription="@string/wk_ds_close_cd"
+            android:clickable="true"
+            android:focusable="true" />
+    </LinearLayout>
+</merge>

@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/wk_app_shell_bg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="36dp"
+            android:paddingBottom="12dp">
+
+            <ImageButton
+                android:id="@+id/auth_back_button"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/wk_app_card_quiet_bg"
+                android:contentDescription="Back"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:padding="13dp"
+                android:scaleType="center"
+                android:src="@drawable/ic_wk_back"
+                app:tint="@color/wk_overlay_dark_text" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Account sign in"
+                    android:textColor="@color/wk_overlay_dark_text"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Phone or Google"
+                    android:textColor="@color/wk_overlay_dark_text2"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/wk_logo_rounded_square_bg"
+                android:clipToOutline="true"
+                android:contentDescription="WittyKeys logo"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_witty_logo" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/wk_app_shell_bg"
+            android:clipToPadding="false"
+            android:fillViewport="true"
+            android:overScrollMode="never"
+            android:paddingBottom="28dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingHorizontal="16dp"
+                android:paddingTop="18dp"
+                android:paddingBottom="28dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/wk_app_card_hero_bg"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="18dp"
+                    android:paddingVertical="18dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="28dp"
+                        android:background="@drawable/wk_app_card_quiet_bg"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:text="Account access"
+                        android:textColor="@color/wk_overlay_dark_accent"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:text="Manage your account when you need it."
+                        android:textColor="@color/wk_overlay_dark_text"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:lineSpacingExtra="2dp"
+                        android:text="Your AI credits and tools stay usable anonymously. Sign in only for plan, billing, and account controls."
+                        android:textColor="@color/wk_overlay_dark_text2"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="44dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/wk_app_card_quiet_bg"
+                            android:gravity="center"
+                            android:text="Anonymous stays on"
+                            android:textColor="@color/wk_overlay_dark_text"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="44dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/wk_app_card_quiet_bg"
+                            android:gravity="center"
+                            android:text="Play billing ready"
+                            android:textColor="@color/wk_overlay_dark_text"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/wk_app_card_bg"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Phone sign in"
+                        android:textColor="@color/wk_overlay_dark_text"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Use OTP when you want account recovery without adding a password."
+                        android:textColor="@color/wk_overlay_dark_text2"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:layout_marginTop="14dp"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/country_code_button"
+                            android:layout_width="82dp"
+                            android:layout_height="match_parent"
+                            android:backgroundTint="@color/wk_overlay_dark_surface3"
+                            android:gravity="center"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp"
+                            android:paddingHorizontal="8dp"
+                            android:text="+91"
+                            android:textAllCaps="false"
+                            android:textColor="@color/wk_overlay_dark_text"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:cornerRadius="12dp"
+                            app:icon="@drawable/down_arrow_icon"
+                            app:iconGravity="textEnd"
+                            app:iconPadding="2dp"
+                            app:iconTint="@color/wk_overlay_dark_text2" />
+
+                        <EditText
+                            android:id="@+id/phone_edit_text"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/wk_internal_input_bg"
+                            android:hint="Phone Number"
+                            android:inputType="phone"
+                            android:paddingHorizontal="14dp"
+                            android:singleLine="true"
+                            android:textColor="@color/wk_overlay_dark_text"
+                            android:textColorHint="@color/wk_overlay_dark_text3"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/login_with_phone_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:layout_marginTop="14dp"
+                        android:backgroundTint="@color/wk_overlay_dark_accent"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:text="Send OTP"
+                        android:textAllCaps="false"
+                        android:textColor="@color/primary_app_color"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        app:cornerRadius="14dp" />
+
+                    <LinearLayout
+                        android:id="@+id/otp_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:background="@drawable/wk_app_search_bg"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="12dp"
+                        android:paddingVertical="12dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Enter verification code"
+                            android:textColor="@color/wk_overlay_dark_text"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/otp_edit_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/wk_internal_input_bg"
+                            android:hint="6-digit OTP"
+                            android:inputType="number"
+                            android:letterSpacing="0.08"
+                            android:paddingHorizontal="14dp"
+                            android:singleLine="true"
+                            android:textColor="@color/wk_overlay_dark_text"
+                            android:textColorHint="@color/wk_overlay_dark_text3"
+                            android:textSize="16sp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/verify_otp_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="12dp"
+                            android:backgroundTint="@color/wk_overlay_dark_accent"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp"
+                            android:text="Verify OTP"
+                            android:textAllCaps="false"
+                            android:textColor="@color/primary_app_color"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            app:cornerRadius="14dp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/resend_otp_button"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="46dp"
+                            android:layout_marginTop="8dp"
+                            android:backgroundTint="@android:color/transparent"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp"
+                            android:text="Resend OTP"
+                            android:textAllCaps="false"
+                            android:textColor="@color/wk_overlay_dark_accent"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:cornerRadius="14dp"
+                            app:strokeColor="@color/wk_overlay_dark_accent"
+                            app:strokeWidth="1dp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:gravity="center"
+                        android:text="or continue with"
+                        android:textColor="@color/wk_overlay_dark_text3"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/sign_in_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/wk_auth_google_button_bg"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="18dp">
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_marginEnd="12dp"
+                            android:contentDescription="Google"
+                            android:src="@drawable/ic_brand_google" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Continue with Google"
+                            android:textColor="@color/primary_app_color"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/loading_overlay"
+        layout="@layout/loading_overlay" />
+</FrameLayout>

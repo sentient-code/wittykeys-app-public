@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="tag_cta_type_icon_hint" type="id"/>
+    <item name="message_card" type="id"/>
+    <item name="message_text" type="id"/>
+    <item name="tutorial_animation" type="id"/>
+    <item name="tutorial_highlight" type="id"/>
+    <item name="theme_original_background" type="id"/>
+</resources>

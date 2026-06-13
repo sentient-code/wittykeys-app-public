@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ═══ Emoji Grid ═══ -->
+    <integer name="wk_emoji_grid_columns">9</integer>
+    <integer name="wk_gif_grid_columns">3</integer>
+    <dimen name="wk_emoji_text_size">24sp</dimen>
+    <dimen name="wk_emoji_cell_padding_h">4dp</dimen>
+    <dimen name="wk_emoji_cell_padding_v">6dp</dimen>
+    <dimen name="wk_emoji_cell_target_size">44dp</dimen>
+    <integer name="wk_emoji_grid_columns_min">7</integer>
+
+    <!-- ═══ Emoji Tap Animation ═══ -->
+    <integer name="wk_emoji_tap_anim_press_ms">80</integer>
+    <integer name="wk_emoji_tap_anim_release_ms">120</integer>
+    <item name="wk_emoji_tap_anim_alpha" format="float" type="dimen">0.6</item>
+
+    <!-- ═══ Emoji Category Bar ═══ -->
+    <dimen name="wk_emoji_category_text_size">12sp</dimen>
+    <dimen name="wk_emoji_category_margin_h">6dp</dimen>
+    <dimen name="wk_emoji_category_margin_v">4dp</dimen>
+    <dimen name="wk_emoji_category_padding">8dp</dimen>
+    <dimen name="wk_emoji_category_padding_h">10dp</dimen>
+    <dimen name="wk_emoji_category_padding_v">6dp</dimen>
+    <integer name="wk_emoji_category_select_anim_ms">150</integer>
+
+    <!-- ═══ GIF Category Bar ═══ -->
+    <dimen name="wk_gif_category_text_size">12sp</dimen>
+    <dimen name="wk_gif_category_margin_h">6dp</dimen>
+    <dimen name="wk_gif_category_margin_v">4dp</dimen>
+    <dimen name="wk_gif_category_padding">8dp</dimen>
+    <dimen name="wk_gif_category_padding_h">10dp</dimen>
+    <dimen name="wk_gif_category_padding_v">6dp</dimen>
+
+    <!-- ═══ Functional Bar (Bottom) ═══ -->
+    <dimen name="wk_emoji_func_height">40dp</dimen>
+    <dimen name="wk_emoji_func_padding">4dp</dimen>
+    <dimen name="wk_emoji_func_text_size">13sp</dimen>
+    <dimen name="wk_emoji_func_btn_padding_v">4dp</dimen>
+    <dimen name="wk_emoji_func_btn_padding_h">12dp</dimen>
+    <dimen name="wk_emoji_func_btn_icon_padding">6dp</dimen>
+    <dimen name="wk_emoji_func_switcher_margin">8dp</dimen>
+    <dimen name="wk_emoji_func_divider_height">1dp</dimen>
+    <dimen name="wk_emoji_func_underline_height">2dp</dimen>
+
+    <!-- ═══ Recents ═══ -->
+    <integer name="wk_emoji_max_recents">27</integer>
+
+    <!-- ═══ Search Bar ═══ -->
+    <dimen name="wk_emoji_search_height">36dp</dimen>
+    <dimen name="wk_emoji_search_text_size">13sp</dimen>
+    <dimen name="wk_emoji_search_padding_h">10dp</dimen>
+    <dimen name="wk_emoji_search_icon_size">22dp</dimen>
+    <dimen name="wk_emoji_search_clear_size">22dp</dimen>
+    <dimen name="wk_emoji_search_icon_margin_start">10dp</dimen>
+    <dimen name="wk_emoji_search_text_margin_start">34dp</dimen>
+    <dimen name="wk_emoji_search_text_margin_end">28dp</dimen>
+    <dimen name="wk_emoji_search_clear_margin_end">6dp</dimen>
+    <dimen name="wk_emoji_search_corner_radius">18dp</dimen>
+    <dimen name="wk_emoji_search_margin_h">8dp</dimen>
+    <dimen name="wk_emoji_search_margin_v">3dp</dimen>
+
+    <!-- ═══ Search Results Hint ═══ -->
+    <dimen name="wk_emoji_search_hint_text_size">9sp</dimen>
+    <dimen name="wk_emoji_search_hint_padding_h">14dp</dimen>
+    <dimen name="wk_emoji_search_hint_padding_top">1dp</dimen>
+
+    <!-- ═══ Skin Tone Popup (D2) ═══ -->
+    <dimen name="wk_emoji_skin_popup_padding">6dp</dimen>
+    <dimen name="wk_emoji_skin_popup_corner_radius">12dp</dimen>
+    <dimen name="wk_emoji_skin_popup_border_width">1dp</dimen>
+    <dimen name="wk_emoji_skin_popup_cell_size">44dp</dimen>
+</resources>

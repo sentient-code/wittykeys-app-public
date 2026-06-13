@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/secondary_app_color">
+
+    <!-- Header with Icon and Title -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="16dp">
+
+        <ImageView
+            android:id="@+id/permission_icon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@android:drawable/ic_lock_lock"
+            android:contentDescription="Lock icon"
+            app:tint="@color/onboarding_card_blue" />
+
+        <TextView
+            android:id="@+id/permission_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Smart Replies Permission"
+            android:textColor="@color/third_app_color"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Description -->
+    <TextView
+        android:id="@+id/permission_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="WittyKeys needs accessibility access to read screen content and suggest smart replies."
+        android:textColor="@color/fourth_app_color"
+        android:textSize="15sp"
+        android:lineSpacingExtra="4dp"
+        android:paddingBottom="20dp" />
+
+    <!-- Privacy Bullets -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="24dp"
+        android:background="@drawable/rounded_background_dark"
+        android:padding="16dp">
+
+        <!-- Bullet 1 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Only reads when you tap"
+                android:textColor="@color/third_app_color"
+                android:textSize="14sp"
+                android:drawableStart="@android:drawable/ic_menu_view"
+                android:drawablePadding="12dp"
+                android:drawableTint="@color/onboarding_card_blue" />
+        </LinearLayout>
+
+        <!-- Bullet 2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Never stores or sends your messages"
+                android:textColor="@color/third_app_color"
+                android:textSize="14sp"
+                android:drawableStart="@android:drawable/ic_secure"
+                android:drawablePadding="12dp"
+                android:drawableTint="@color/onboarding_card_blue" />
+        </LinearLayout>
+
+        <!-- Bullet 3 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All processing happens on device"
+                android:textColor="@color/third_app_color"
+                android:textSize="14sp"
+                android:drawableStart="@android:drawable/ic_menu_my_calendar"
+                android:drawablePadding="12dp"
+                android:drawableTint="@color/onboarding_card_blue" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_cancel"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="Cancel"
+            android:textColor="@color/fourth_app_color"
+            android:textSize="14sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_continue"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:backgroundTint="@color/onboarding_card_blue"
+            android:text="Continue"
+            android:textColor="@color/third_app_color"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:cornerRadius="8dp"
+            app:icon="@android:drawable/ic_media_play"
+            app:iconGravity="end"
+            app:iconTint="@color/third_app_color" />
+    </LinearLayout>
+
+</LinearLayout>

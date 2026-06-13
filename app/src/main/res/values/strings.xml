@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+/*
+**
+** Copyright 2008, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Option to provide vibrate/haptic feedback on keypress -->
+    <string name="vibrate_on_keypress">Vibrate on keypress</string>
+
+    <!-- Option to play back sound on keypress in soft keyboard -->
+    <string name="sound_on_keypress">Sound on keypress</string>
+
+    <!-- Option to control whether or not to show a popup with a larger font on each key press. -->
+    <string name="popup_on_keypress">Popup on keypress</string>
+
+    <!-- Settings screen title for preferences [CHAR LIMIT=33]-->
+    <string name="settings_screen_preferences">Preferences</string>
+    <!-- Settings screen title for key press preferences [CHAR LIMIT=33]-->
+    <string name="settings_screen_key_press">Key press</string>
+    <!-- Settings screen title for appearance preferences [CHAR LIMIT=33] -->
+    <string name="settings_screen_appearance">Appearance</string>
+    <!-- Settings screen title for keyboard theme settings [CHAR LIMIT=33] -->
+    <string name="settings_screen_theme">Theme</string>
+
+    <!-- Units abbreviation for the duration (milliseconds) [CHAR LIMIT=10] -->
+    <string name="abbreviation_unit_milliseconds"><xliff:g id="MILLISECONDS">%s</xliff:g>ms</string>
+    <!-- The text that represents the current settings value is the system default [CHAR LIMIT=25] -->
+    <string name="settings_system_default">System default</string>
+
+    <!-- Option to enable auto capitalization of sentences -->
+    <string name="auto_cap">Auto-capitalization</string>
+    <!-- Description for option to enable auto capitalization of sentences -->
+    <string name="auto_cap_summary">Capitalize the first word of each sentence</string>
+
+    <!-- Preference for input language selection -->
+    <string name="select_language">Languages</string>
+
+    <!-- Description for English (UK) keyboard subtype [CHAR LIMIT=25]
+         (UK) should be an abbreviation of United Kingdom to fit in the CHAR LIMIT. -->
+    <string name="locale_name_en_GB">English (UK)</string>
+    <!-- Description for English (US) keyboard subtype [CHAR LIMIT=25]
+         (US) should be an abbreviation of United States to fit in the CHAR LIMIT. -->
+    <string name="locale_name_en_US">English (US)</string>
+    <!-- Description for Spanish (US) keyboard subtype [CHAR LIMIT=25]
+         (US) should be an abbreviation of United States to fit in the CHAR LIMIT. -->
+    <string name="locale_name_es_US">Spanish (US)</string>
+    <!-- Description for Hinglish (https://en.wikipedia.org/wiki/Hinglish) keyboard subtype [CHAR LIMIT=25] -->
+    <string name="locale_name_hi_ZZ">Hinglish</string>
+    <!-- Description for Serbian (Latin) keyboard subtype [CHAR LIMIT=25]
+         (Latin) can be an abbreviation to fit in the CHAR LIMIT. -->
+    <string name="locale_name_sr_ZZ">Serbian (Latin)</string>
+    <!-- Description for a keyboard layout listing the language and layout name. -->
+    <string name="subtype_generic_layout"><xliff:g example="English (US)" id="LANGUAGE_NAME">%s</xliff:g> (<xliff:g example="QWERTY" id="LAYOUT">%s</xliff:g>)</string>
+    <!-- Description for a traditional keyboard layout, such as Nepali (Traditional). -->
+    <string name="subtype_traditional">Traditional</string>
+    <!-- Description for a compact keyboard layout, such as Hindi (Compact). -->
+    <string name="subtype_compact">Compact</string>
+    <!-- Description for Bulgarian (BDS) keyboard layout. -->
+    <string name="subtype_bds">BDS</string>
+    <!-- Description for Turkish (Q) keyboard layout. -->
+    <string name="subtype_q">Q</string>
+    <!-- Description for Turkish (F) keyboard layout. -->
+    <string name="subtype_f">F</string>
+    <!-- Description for Bengali (Akkhor) keyboard layout. -->
+    <string name="subtype_akkhor">Akkhor</string>
+
+    <string name="keyboard_theme_dark" translatable="false">Material Dark</string>
+    <string name="keyboard_theme_light" translatable="false">Material Light</string>
+    <string name="keyboard_theme_system" translatable="false">System Default</string>
+
+    <string name="sendChatGpt">Send</string>
+    <!-- Title of the button to add a language in the settings dialog [CHAR LIMIT=15] -->
+    <string name="add">Add</string>
+    <!-- Title of the button to remove a language in the settings dialog [CHAR LIMIT=15] -->
+    <string name="remove">Remove</string>
+
+    <!-- Title of the settings for keypress vibration duration [CHAR LIMIT=35] -->
+    <string name="prefs_keypress_vibration_duration_settings">Keypress vibration duration</string>
+    <!-- Title of the settings for keypress sound volume [CHAR LIMIT=35] -->
+    <string name="prefs_keypress_sound_volume_settings">Keypress sound volume</string>
+    <!-- Title of the settings for key long press delay [CHAR LIMIT=35] -->
+    <string name="prefs_key_longpress_timeout_settings">Key long press delay</string>
+
+    <!-- Title of the button to revert to the default value of the device in the settings dialog [CHAR LIMIT=15] -->
+    <string name="button_default">Default</string>
+
+    <string name="abbreviation_unit_percent" translatable="false"><xliff:g id="PERCENTS">%s</xliff:g>%%</string>
+    <string name="abbreviation_unit_dp" translatable="false"><xliff:g id="DENSITY_INDEPENDENT_PIXELS">%d</xliff:g> dp</string>
+
+    <string name="prefs_keyboard_height_settings">Keyboard height</string>
+    <string name="prefs_bottom_offset_portrait_settings">Bottom offset</string>
+    <string name="keyboard_color">Set custom keyboard color</string>
+    <string name="hide_special_chars">Hide special characters</string>
+    <string name="hide_language_switch_key">Hide language switch key</string>
+    <string name="pref_enable_ime_switch">Switch to other keyboards</string>
+    <string name="show_number_row">Show separate number row</string>
+    <string name="space_swipe">Space swipe cursor move</string>
+    <string name="delete_swipe">Delete swipe</string>
+    <string name="matching_navbar_color">Use matching navigation bar color</string>
+    <string name="setup_message">WittyKeys isn’t enabled yet. \n\nTap “OK” to open your device’s Language &amp; Input settings. \n\nDon’t worry — you can switch back anytime. \n\nJust select WittyKeys as your current keyboard to start using smart AI typing!</string>
+    <string name="user_languages">Enabled keyboard languages</string>
+    <string name="add_language">Add language</string>
+    <string name="remove_language">Remove language</string>
+    <string name="generic_language_layouts"><xliff:g example="English (US)" id="LANGUAGE_NAME">%s</xliff:g> keyboard layouts</string>
+    <string name="change_keyboard">Change keyboard</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="license">License</string>
+    <string name="error_device_network">No Internet.</string>
+    <string name="error_server_timeout">Server is not responding.</string>
+    <string name="error_generic">Error fetching response.</string>
+    <string name="concatenated_text">%1$s%2$s</string>
+    <string name="choose_a_category">Choose a category or option 🤔</string>
+    <string name="choose_an_intent">Select an intent category 🤔</string>
+    <string name="choose_a_tone">Select a tone 🤔</string>
+
+    <!-- Settings screen title for Get Started-->
+    <string name="settings_screen_get_started">Get Started</string>
+    <string name="enable_instruction"><font color="#DFE8E8">● </font> Tap <b>“Open Settings”</b></string>
+    <string name="choose_instruction"><font color="#DFE8E8">● </font> Select <b>“Wittykeys”</b></string>
+    <string name="enable_default_instruction"><font color="#DFE8E8">● </font> Enable <b>“Wittykeys”</b> as your default keyboard </string>
+    <string name="reassurance_instruction"><font color="#DFE8E8">● </font> <b>You can switch back anytime. We respect your privacy.</b> </string>
+
+    <string name="enable_accessibility_instruction"><font color="#DFE8E8">● </font> Enable <b>“Wittykeys”</b> in Settings Accessibility</string>
+    <string name="choose_accessibility_instruction"><font color="#DFE8E8">● </font> WittyKeys enhances how you interact with text across your apps. When you need to do something with text on your screen—like translate it, share it, or search for related information—WittyKeys can help. It temporarily reads the text to perform your chosen action, ensuring your data remains private and is never saved.</string>
+
+    <string name="terms_and_privacy_text"><a href="https://wittykeys.com/privacy-policy">Terms Of Use</a>  &amp;  <a href="https://wittykeys.com/privacy-policy">Privacy Policy</a></string>
+    <string name="web_client_id">626366493162-dfru8tes08enosjav996dq6vdhpnijk8.apps.googleusercontent.com</string>
+    <string name="info_ai_assistant_string">In the AI Assistant view, you can maintain a continuous conversation with the ChatGPT model. This means that subsequent prompts or questions will be treated as part of the ongoing dialogue, allowing you to ask follow-up questions and engage in more in-depth discussions without repeatedly providing context. Please note that these conversations are not currently saved; initiating a new prompt will begin a fresh interaction. We are actively developing a feature to enable local saving of conversations in future versions, allowing you to easily resume previous discussions without losing your history.</string>
+    <string name="accessibility_service_label">WittyKeys</string>
+    <string name="accessibility_description">Take control of text in any app with WittyKeys. It lets you interact with on-screen text in powerful ways, such as translating, sharing, or looking up information. WittyKeys only reads text when you initiate an action and never stores your data.</string>
+    <string name="cancel_account_message">Before you cancel your subscription, we\'d love to understand if there\'s anything we could do better. If you’ve encountered any issues or if there’s something we can improve, please let us know – we’re always looking for ways to enhance your experience!
+
+\n\n If you decide to proceed with cancellation, your subscription will end at the next billing cycle, and you’ll still have access to all premium features until then.
+
+   \n\nIf you have any questions or concerns, or if you’re unsure about canceling, feel free to reach out to us at <b>contact@wittykeys.com</b>. We’re here to assist you and would love the opportunity to address any issues.
+
+\n\nTo cancel your subscription, click below:</string>
+    <string name="delete_account_message">Before you proceed with deleting your account, we\'d love to understand why you\'re leaving. Is there anything we could have done differently to enhance your experience?
+
+\n\nIf you have any concerns, feedback, or need assistance, please don\'t hesitate to reach out to us at <b>contact@wittykeys.com</b>. We\'re here to help and would love to address any issues you may have!
+
+\n\nPlease remember that once your account is deleted, all your data, preferences, and history will be permanently removed, and this action cannot be undone.
+
+\n\nIf you\'re sure you want to delete your account, click below to confirm.</string>
+
+    <string name="screen_reader_event">SCREEN_READER_EVENT</string>
+    <string name="enable_accessibility">ENABLE_ACCESSIBILITY</string>
+    <string name="disable_accessibility">DISABLE_ACCESSIBILITY</string>
+
+    //Values
+    <string name="contact_mail">contact@wittykeys.com</string>
+    <string name="contact_whatsapp">+919266445733</string>
+    <string name="app_store_link">https://play.google.com/store/apps/details?id=project.witty.keys</string>
+    <string name="privacy_policy_link">https://wittykeys.com/privacy-policy</string>
+
+    <string name="subscription_active">WittyKeys Plus active</string>
+    <string name="free_trial_active_title">Free AI credits ready</string>
+    <string name="free_trial_active_subtitle">Use Overlay, Keyboard, replies, scan, tone, grammar, translate, and AI Chat with daily credits.</string>
+    <string name="free_trial_ended_title">Daily AI credits used</string>
+    <string name="free_trial_ended_subtitle">Free trial ended</string>
+    <string name="ready_to_subscribe_title">Upgrade for more AI credits</string>
+    <string name="ready_to_subscribe_subtitle">Increase your AI credit allowance when daily use grows.</string>
+    <string name="default_trial_title">20 free AI credits/day</string>
+    <string name="default_trial_subtitle">Try Reply, Scan, Tone, Grammar, Translate, and AI Chat daily.</string>
+    <string name="enjoy_wittykeys">Enjoy Wittykeys!</string>
+
+    // Optional strings for the separate card:
+    <string name="free_trial_quota_title">Free Trial Quota:</string>
+    <string name="free_trial_ended_title_card">Free Trial Ended</string>
+    <string name="free_trial_ended_content_card">Subscribe to continue using Witty Keys!</string>
+    <string name="free_quota_title_default">Free Quota:</string>
+    <string name="login_to_start">Login To Start</string>
+    <string name="START_FREE_TRIAL">Start Free Trial</string>
+    <string name="SUBSCRIBE">Subscribe Now</string>
+
+    //fb configuration
+
+    <!-- Common CTA labels -->
+    <string name="copy">Copy</string>
+    <string name="reply">Reply</string>
+    <string name="apply">Apply</string>
+
+    <!-- Toasts / status -->
+    <string name="copied">Copied to clipboard</string>
+    <string name="editor_unavailable">Editor not available.</string>
+    <string name="reply_ready_edit">Reply inserted — edit if needed, then send.</string>
+    <string name="type_something_first">Please type something first.</string>
+    <string name="no_text_to_translate">No text to translate.</string>
+
+    <!-- Metadata card toggles -->
+    <string name="show_details">Show details</string>
+    <string name="hide_details">Hide details</string>
+
+    <string name="ai_assistant_clear_chat">Clear Chat</string>
+    <string name="ai_assistant_hint">Type a follow-up…</string>
+    <string name="ai_assistant_info_title">Info</string>
+
+    <!-- MemoryView strings (Build 6.3) -->
+    <string name="switch_to_keyboard">Switch to keyboard</string>
+    <string name="expand_memory_view">Expand</string>
+    <string name="collapse_memory_view">Collapse</string>
+    <string name="analyzing_conversation">Analyzing conversation</string>
+    <string name="unable_to_analyze">Unable to analyze conversation</string>
+    <string name="error_couldnt_connect">\u26A1 Couldn\'t connect</string>
+    <string name="retry">Retry</string>
+    <string name="retry_with_icon">\u21BB Retry</string>
+    <string name="close">Close</string>
+    <string name="use_keyboard">Use Keyboard</string>
+    <string name="report_content">Report content</string>
+    <string name="report_email_subject">WittyKeys AI Content Report</string>
+    <string name="report_email_body_prefix">I would like to report the following AI-generated content:\n\n---\nFeature: Smart Reply\nContent:\n</string>
+    <string name="report_email_body_suffix">\n---\n\nReason for report:\n[Please describe why you\'re reporting this content]\n\n---\nApp Version: %1$s\nTimestamp: %2$s</string>
+
+    <!-- MemoryViewModal strings (Build 6.3 - Phase 5) -->
+    <string name="memory_view_title">Memory View</string>
+    <string name="close_modal">Close</string>
+    <string name="collapse_modal">Collapse</string>
+    <string name="collapse">Collapse</string>
+    <string name="emotional_analysis">Emotional Analysis</string>
+    <string name="conversation_summary">Conversation Summary</string>
+    <string name="suggested_replies">Suggested Replies</string>
+    <string name="recommended_actions">Recommended Actions</string>
+    <string name="no_recommendations">No recommendations available</string>
+    <string name="intensity_label">Intensity: %1$s</string>
+    <string name="translated_from">Translated from %1$s</string>
+    <string name="schedule_call">Schedule a call</string>
+    <string name="share_document">Share document</string>
+    <string name="set_reminder">Set reminder</string>
+    <string name="send_email_summary">Send email summary</string>
+
+    <!-- CustomModeView strings (Build 6.3 - Phase 6) -->
+    <string name="custom_mode_instruction">Type prompt in chat, tap Generate →</string>
+    <string name="generate">Generate</string>
+    <string name="cancel_custom_mode">Cancel custom mode</string>
+
+    <!-- Accessibility Permission Prompt (Build 6.3 - Phase 9) -->
+    <string name="accessibility_prompt_text">🔓 Enable AI features for smart replies</string>
+    <string name="accessibility_prompt_enable">Enable</string>
+    <string name="accessibility_consent_title">Accessibility Service Permission</string>
+    <string name="accessibility_consent_message">WittyKeys requires Accessibility Service permission to provide these AI-powered features:\n\n✓ Smart reply suggestions based on conversation\n✓ Emotional context analysis\n✓ Auto-translation detection\n✓ Context-aware tone suggestions\n\nYour data stays on device and is never stored.</string>
+    <string name="accessibility_grant_permission">Grant Permission</string>
+    <string name="accessibility_cancel">Cancel</string>
+
+    <!-- Phase 2 UI Revamp - Emoji Strings -->
+    <string name="emoji_brain" translatable="false">🧠</string>
+    <string name="emoji_ai" translatable="false">💬</string>
+    <string name="emoji_tone" translatable="false">🎭</string>
+    <string name="emoji_grammar" translatable="false">✓</string>
+    <string name="emoji_translate" translatable="false">🌐</string>
+    <string name="emoji_read" translatable="false">📖</string>
+    <string name="emoji_clipboard" translatable="false">📋</string>
+    <string name="emoji_dictate" translatable="false">🎤</string>
+    <string name="emoji_collapse" translatable="false">↓</string>
+    <string name="emoji_expand" translatable="false">↔</string>
+    <string name="emoji_back" translatable="false">←</string>
+    <string name="emoji_regen" translatable="false">🔄</string>
+    <string name="emoji_close" translatable="false">✕</string>
+    <string name="emoji_flag" translatable="false">🚩</string>
+    <string name="emoji_check" translatable="false">✓</string>
+    <string name="emoji_unlock" translatable="false">🔓</string>
+    <string name="emoji_lock" translatable="false">🔒</string>
+    <string name="emoji_heart" translatable="false">❤️</string>
+    <string name="emoji_eyes" translatable="false">👀</string>
+    <string name="emoji_custom" translatable="false">✏️</string>
+    <string name="emoji_more" translatable="false">…</string>
+    <string name="emoji_smile" translatable="false">😊</string>
+    <string name="emoji_shield" translatable="false">🛡️</string>
+    <string name="emoji_phone_icon" translatable="false">📱</string>
+    <string name="emoji_call" translatable="false">📞</string>
+    <string name="emoji_calendar" translatable="false">📅</string>
+    <string name="emoji_globe" translatable="false">🌐</string>
+
+    <!-- Phase 2 UI Revamp - CTA Labels -->
+    <string name="cta_ai">AI</string>
+    <string name="cta_tone">Tone</string>
+    <string name="cta_grammar">Gram</string>
+    <string name="cta_translate">Trans</string>
+    <string name="cta_read">Read</string>
+    <string name="cta_clipboard">Clip</string>
+
+    <!-- Phase 2 UI Revamp - Content Descriptions -->
+    <string name="switch_to_memory_view">Switch to Memory View</string>
+    <string name="ai_chat">AI Chat</string>
+    <string name="tone">Tone</string>
+    <string name="grammar">Grammar</string>
+    <string name="translate">Translate</string>
+    <string name="read_aloud">Read Aloud</string>
+    <string name="clipboard">Clipboard</string>
+    <string name="voice_input">Voice Input</string>
+    <string name="collapse_toolbar">Collapse toolbar</string>
+    <string name="expand_toolbar">Expand toolbar</string>
+    <string name="tap_ai_feature_hint">Tap an AI feature to get started</string>
+    <string name="enable_ai_features">Enable AI features for smart replies</string>
+    <string name="enable">Enable</string>
+    <string name="cancel">Cancel</string>
+
+    <!-- Phase 2 UI Revamp - MemoryView -->
+    <string name="scroll_for_suggestions">↓ scroll for suggestions</string>
+    <string name="regenerate">Regenerate</string>
+
+    <!-- Phase 2 UI Revamp - Accessibility Consent Sheet -->
+    <string name="acc_consent_title">Unlock AI Features</string>
+    <string name="acc_consent_subtitle">WittyKeys needs Accessibility permission to read messages and provide smart replies.</string>
+    <string name="feature_smart_replies">Smart Replies</string>
+    <string name="feature_smart_replies_desc">AI-powered reply suggestions based on conversation</string>
+    <string name="feature_emotion">Emotion Detection</string>
+    <string name="feature_emotion_desc">Understand the emotional context of messages</string>
+    <string name="feature_context">Context Awareness</string>
+    <string name="feature_context_desc">Know who you\'re talking to and adapt</string>
+    <string name="feature_privacy">Privacy First</string>
+    <string name="feature_privacy_desc">Data stays on device, never stored or shared</string>
+    <string name="acc_privacy_note">We only read visible message content. No data is stored or sent to third parties.</string>
+    <string name="not_now">Not Now</string>
+    <string name="enable_now">Enable Now</string>
+
+    <!-- Phase 2 UI Revamp - Custom Mode -->
+    <string name="custom_instruction">Type your instruction…</string>
+
+    <!-- Phase 2 UI Revamp - Row 2 States -->
+    <string name="no_context_hint">Start typing or open a chat</string>
+    <string name="more_replies">+%d more</string>
+
+</resources>

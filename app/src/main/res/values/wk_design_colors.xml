@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- WittyKeys UI Design Colors - Legacy entries (non-duplicate) -->
+<!-- Primary colors now in wk_colors.xml -->
+<resources>
+
+    <!-- ============================================== -->
+    <!-- STAT CARD ACCENT COLORS -->
+    <!-- ============================================== -->
+    <color name="wk_stat_blue">#6CB4EE</color>          <!-- Keystrokes saved -->
+    <color name="wk_stat_green">#4ADE80</color>         <!-- Replies sent -->
+    <color name="wk_stat_orange">#FB923C</color>        <!-- Streak days -->
+    <color name="wk_stat_pink">#F472B6</color>          <!-- Time saved -->
+
+    <!-- Stat card backgrounds (12% opacity) -->
+    <color name="wk_stat_blue_bg">#1F6CB4EE</color>
+    <color name="wk_stat_green_bg">#1F4ADE80</color>
+    <color name="wk_stat_orange_bg">#1FFB923C</color>
+    <color name="wk_stat_pink_bg">#1FF472B6</color>
+
+    <!-- ============================================== -->
+    <!-- SPECIAL STATE COLORS -->
+    <!-- ============================================== -->
+    <color name="wk_error_red">#F87171</color>
+    <color name="wk_success_green">#4ADE80</color>
+    <color name="wk_warning_orange">#FB923C</color>
+    <color name="wk_custom_purple">#A855F7</color>
+    <color name="wk_custom_purple_glow">#26A855F7</color>  <!-- rgba(168,85,247,0.15) -->
+    <color name="wk_custom_purple_border">#66A855F7</color> <!-- rgba(168,85,247,0.4) -->
+
+    <!-- ============================================== -->
+    <!-- OVERLAY COLORS -->
+    <!-- ============================================== -->
+    <color name="wk_overlay">#8C000000</color>          <!-- rgba(0,0,0,0.55) -->
+
+    <!-- ============================================== -->
+    <!-- LAUNCH THEME CARD SURFACES -->
+    <!-- ============================================== -->
+    <color name="wk_launch_card_top">#252B34</color>
+    <color name="wk_launch_card_mid">#1A1D24</color>
+    <color name="wk_launch_card_bottom">#121318</color>
+    <color name="wk_launch_card_elevated_top">#2B3744</color>
+    <color name="wk_launch_card_elevated_mid">#1D212A</color>
+    <color name="wk_launch_card_quiet_top">#222730</color>
+    <color name="wk_launch_card_quiet_bottom">#15171C</color>
+    <color name="wk_launch_card_hero_top">#17324A</color>
+    <color name="wk_launch_card_hero_mid">#1A1B2A</color>
+    <color name="wk_launch_border">#14FFFFFF</color>
+    <color name="wk_launch_border_strong">#22FFFFFF</color>
+    <color name="wk_launch_accent_border">#3D6CB4EE</color>
+
+</resources>

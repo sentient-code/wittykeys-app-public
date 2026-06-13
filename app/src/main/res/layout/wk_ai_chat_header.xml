@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/aiChatHeaderContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- Row 1: Mode tabs + Close button (40dp) -->
+    <LinearLayout
+        android:id="@+id/aiChatHeaderBar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:background="#1A1A1A">
+
+        <!-- Mode tab: General -->
+        <TextView
+            android:id="@+id/modeTabGeneral"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:gravity="center"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:text="🤖 General"
+            android:textSize="11sp"
+            android:fontFamily="sans-serif-medium"
+            android:background="@drawable/bg_mode_tab_active"
+            android:textColor="#4CAF50"
+            android:layout_marginEnd="4dp"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <!-- Mode tab: Personal -->
+        <TextView
+            android:id="@+id/modeTabPersonal"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:gravity="center"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:text="💬 Personal"
+            android:textSize="11sp"
+            android:fontFamily="sans-serif-medium"
+            android:background="@drawable/bg_mode_tab_inactive"
+            android:textColor="#B0B0B0"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <!-- Spacer -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <!-- Close button -->
+        <ImageView
+            android:id="@+id/aiChatCloseBtn"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_close"
+            android:scaleType="centerInside"
+            android:padding="6dp"
+            android:background="@drawable/bg_close_circle"
+            android:contentDescription="Close AI Chat"
+            android:clickable="true"
+            android:focusable="true" />
+    </LinearLayout>
+
+    <!-- Row 2: Context pill row -->
+    <TextView
+        android:id="@+id/aiChatContextPill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="4dp"
+        android:textSize="11sp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="#B0B0B0"
+        android:alpha="0.7"
+        android:background="#1A1A1A"
+        android:text="💬 AI Chat"
+        android:visibility="visible" />
+</LinearLayout>

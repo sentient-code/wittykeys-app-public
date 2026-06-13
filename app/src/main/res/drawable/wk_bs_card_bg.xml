@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Emotion/Summary card bg: gradient(145deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01)) -->
+<!-- Android doesn't support 145deg exactly, using 135deg (closest) -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <gradient
+        android:startColor="#0AFFFFFF"
+        android:endColor="#03FFFFFF"
+        android:angle="135" />
+    <stroke android:width="1dp" android:color="#0FFFFFFF" />
+    <corners android:radius="14dp" />
+</shape>

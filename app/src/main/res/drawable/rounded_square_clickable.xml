@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This selector now only handles the PRESSED STATE color.
+     The normal state color will be applied programmatically. -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <!-- You can keep a hardcoded pressed color, or make this themeable too -->
+            <solid android:color="@color/key_background_pressed_lxx_light" />
+            <corners android:radius="5dp" />
+        </shape>
+    </item>
+    <item>
+        <!-- The NORMAL state is now just a shape definition without a color. -->
+        <shape android:shape="rectangle">
+            <corners android:radius="5dp" />
+            <!-- The <solid> color tag is removed from the normal state -->
+        </shape>
+    </item>
+</selector>

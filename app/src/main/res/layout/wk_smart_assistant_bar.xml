@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SmartAssistantBar: FrameLayout with OriginalView -->
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/wk_smart_bar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/wk_bar_height"
+    android:background="@drawable/wk_smart_bar_bg"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <!-- OriginalView (Row 1 + Row 2) -->
+    <include
+        layout="@layout/wk_original_view"
+        android:id="@+id/wk_original_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"/>
+
+    <!-- Milestone Toast (absolute positioned above bar) -->
+    <TextView
+        android:id="@+id/wk_milestone_toast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:translationY="-36dp"
+        android:background="@drawable/wk_milestone_bg"
+        android:paddingTop="@dimen/wk_milestone_padding_vertical"
+        android:paddingBottom="@dimen/wk_milestone_padding_vertical"
+        android:paddingStart="@dimen/wk_milestone_padding_horizontal"
+        android:paddingEnd="@dimen/wk_milestone_padding_horizontal"
+        android:textSize="@dimen/wk_milestone_text_size"
+        android:textColor="#000000"
+        android:fontFamily="sans-serif-medium"
+        android:textStyle="bold"
+        android:letterSpacing="0.02"
+        android:singleLine="true"
+        android:elevation="4dp"
+        android:visibility="gone"/>
+
+</FrameLayout>

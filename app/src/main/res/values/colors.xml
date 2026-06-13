@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+**
+** Copyright 2012, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+
+<resources>
+    <!-- Dimensions for all themes. -->
+    <!-- Round 6 FIX 17: Increased corner radius from 4dp to 8dp for rounder, Gboard-style look -->
+    <dimen name="button_corner_radius_lxx">8dp</dimen>
+    <!-- Color resources for App theme. -->
+    <color name="primary_app_color">#0B0909</color>
+    <color name="secondary_app_color">#191b20</color>
+    <color name="third_app_color">#ffffff</color>
+    <color name="fourth_app_color">#8396A8</color>
+    <color name="fifth_app_color">#828388</color>
+    <color name="hint_text_color">#60828388</color>
+    <color name="warning_color">#A50104</color>
+    <color name="warning_color_bg">#33A50104</color>
+    <color name="intro_bg_1">#0B0909</color>
+    <color name="intro_bg_2">#0B0909</color>
+    <color name="intro_bg_3">#0B0909</color>
+    <color name="intro_button_background">#191b20</color>
+    <color name="intro_button_text">#9b9a9d</color>
+    <color name="intro_title_text">#f6f6f6</color>
+    <color name="intro_subtitle_text">#828388</color>
+    <color name="indicator_inactive">#CCCCCC</color>
+    <color name="indicator_active">#333333</color>
+
+    <color name="onboarding_card_blue">#007AFF</color>
+    <color name="onboarding_text_primary">#FFFFFF</color>
+    <color name="onboarding_text_secondary">#B0FFFFFF</color>
+    <color name="onboarding_divider">#40FFFFFF</color>
+    <color name="onboarding_button_background">#000000</color>
+    <color name="onboarding_button_text">#FFFFFF</color>
+
+    <!-- Onboarding v2 palette (Build 7.0 — S1-P6) -->
+    <color name="wk_ob_bg">#FF0D0D0F</color>
+    <color name="wk_ob_surface">#FF161619</color>
+    <color name="wk_ob_surface2">#FF1F1F24</color>
+    <color name="wk_ob_surface3">#FF2A2A30</color>
+    <color name="wk_ob_text">#FFF0F0F2</color>
+    <color name="wk_ob_text2">#FF8A8A96</color>
+    <color name="wk_ob_text3">#FF5A5A66</color>
+    <color name="wk_ob_accent">#FF6CB4EE</color>
+    <color name="wk_ob_purple">#FFA78BFA</color>
+    <color name="wk_ob_green">#FF4ADE80</color>
+    <color name="wk_ob_orange">#FFFB923C</color>
+    <color name="wk_ob_orange2">#FFF59E0B</color>
+
+    <!-- ==================== OLD THEME COLORS ==================== -->
+    <!-- Color resources for LXX_Light theme. -->
+    <color name="background_lxx_light">#ECEFF1</color>
+    <color name="key_text_color_lxx_light">#37474F</color>
+    <color name="key_functional_text_color_lxx_light">#CC37474F</color>
+    <color name="key_text_inactive_color_lxx_light">#B337474F</color>
+    <color name="key_hint_letter_color_lxx_light">#B337474F</color>
+    <color name="language_on_spacebar_text_color_lxx_light">#B337474F</color>
+    <color name="sliding_key_input_preview_color_lxx_light">#B34DB6AC</color>
+    <color name="key_background_normal_lxx_light">#22222222</color>
+    <color name="key_background_pressed_lxx_light">#2637474F</color>
+
+    <!-- Color resources for LXX_Dark theme (matched to mockup). -->
+    <color name="background_lxx_dark">#1A1A1A</color>
+    <color name="key_text_color_lxx_dark">#eeeeee</color>
+    <color name="key_functional_text_color_lxx_dark">#eeeeee</color>
+    <color name="key_text_inactive_color_lxx_dark">#80FFFFFF</color>
+    <color name="key_hint_letter_color_lxx_dark">#666668</color>
+    <color name="sliding_key_input_preview_color_lxx_dark">#28282A</color>
+    <color name="key_background_normal_lxx_dark">#28282A</color>
+    <color name="key_background_pressed_lxx_dark">#353537</color>
+    <color name="product_background_color">#fafafa</color>
+
+    <!-- Removed themes: Dracula, Solarized, Gruvbox, Monokai, Catppuccin, Everforest, Tokyo Night, Ayu, Rosé Pine -->
+
+    <!-- ==================== MODERN KEY COLORS FOR GBOARD-STYLE THEMES (LXX) ==================== -->
+    <!-- Light theme modern pastel key backgrounds -->
+    <color name="modern_key_background_lxx_light">#FFFFFF</color>
+    <!-- Pressed state for modern keys in light theme -->
+    <color name="modern_key_pressed_background_lxx_light">#F5F5F5</color>
+    <!-- Functional (shift, backspace) key background for modern light theme -->
+    <color name="modern_key_functional_background_lxx_light">#E8E8E8</color>
+    <!-- Spacebar key background for modern light theme -->
+    <color name="modern_key_spacebar_background_lxx_light">#E8E8E8</color>
+
+    <!-- Dark theme modern key backgrounds (darker to match reference) -->
+    <color name="modern_key_background_lxx_dark">#1C1C1E</color>
+    <!-- Pressed state for modern keys in dark theme -->
+    <color name="modern_key_pressed_background_lxx_dark">#2A2A2C</color>
+    <!-- Functional key background for modern dark theme -->
+    <color name="modern_key_functional_background_lxx_dark">#1C1C1E</color>
+    <!-- Spacebar key background for modern dark theme -->
+    <color name="modern_key_spacebar_background_lxx_dark">#1C1C1E</color>
+
+    <!-- Alias for shift/capslock icon tint. This alias points to the functional text color for
+         the light theme so that the system-tinted shift icons pick up the appropriate colour.
+         If different colours are desired for dark themes, override this definition in
+         values-night/colors.xml accordingly. -->
+    <color name="key_functional_text_color_lxx_system">@color/key_functional_text_color_lxx_light</color>
+
+    <color name="shimmer_base_light">#E0E0E0</color>     <!-- light grey -->
+    <color name="shimmer_highlight_light">#F5F5F5</color>
+
+    <!-- System theme auto-switching colors (light mode defaults, overridden in values-night/) -->
+    <color name="background_lxx_system_auto">@color/background_lxx_light</color>
+    <color name="key_text_color_lxx_system_auto">@color/key_text_color_lxx_light</color>
+    <color name="key_text_inactive_color_lxx_system_auto">@color/key_text_inactive_color_lxx_light</color>
+    <color name="key_functional_text_color_lxx_system_auto">@color/key_functional_text_color_lxx_light</color>
+    <color name="key_hint_letter_color_lxx_system_auto">@color/key_hint_letter_color_lxx_light</color>
+
+    <!-- Additional auto-switching colors for MainKeyboardView -->
+    <color name="sliding_key_input_preview_color_lxx_system_auto">@color/sliding_key_input_preview_color_lxx_light</color>
+    <color name="language_on_spacebar_text_color_lxx_system_auto">@color/language_on_spacebar_text_color_lxx_light</color>
+
+    <!-- Auto-switching colors for ProductView / UtilityRow / themed buttons -->
+    <color name="product_view_title_bg_lxx_system_auto">#FFFFFF</color>
+    <color name="themed_button_bg_lxx_system_auto">#FFFFFF</color>
+    <color name="utility_row_separator_lxx_system_auto">#20000000</color>
+    <color name="themed_button_pressed_lxx_system_auto">@color/key_background_pressed_lxx_light</color>
+
+    <!-- Auto-switching colors for AI Chat bubble theming -->
+    <color name="chat_user_bubble_lxx_system_auto">#2D8A4E</color>
+    <color name="chat_ai_bubble_lxx_system_auto">#F0F0F3</color>
+    <color name="chat_cta_chip_lxx_system_auto">#E8E8ED</color>
+    <color name="chat_input_area_lxx_system_auto">#F5F5F8</color>
+
+</resources>
+
+

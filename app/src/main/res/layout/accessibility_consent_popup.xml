@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Accessibility Consent Popup Layout (Phase 9)
+
+    CRITICAL: This modal MUST be shown BEFORE redirecting to Settings.
+    Play Store requirement - user must understand what permission is for.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@drawable/modal_background">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/consent_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/accessibility_consent_title"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#212121"
+        android:gravity="center"
+        android:paddingBottom="16dp" />
+
+    <!-- Message explaining why permission is needed -->
+    <TextView
+        android:id="@+id/consent_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/accessibility_consent_message"
+        android:textSize="14sp"
+        android:textColor="#424242"
+        android:lineSpacingMultiplier="1.3"
+        android:paddingBottom="24dp" />
+
+    <!-- Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end">
+
+        <!-- Cancel button -->
+        <Button
+            android:id="@+id/cancel_button"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="@string/accessibility_cancel"
+            android:textSize="13sp"
+            android:textAllCaps="false"
+            android:paddingHorizontal="20dp"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:backgroundTint="#E0E0E0"
+            android:textColor="#424242"
+            android:layout_marginEnd="12dp" />
+
+        <!-- Grant Permission button (primary action) -->
+        <Button
+            android:id="@+id/grant_permission_button"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="@string/accessibility_grant_permission"
+            android:textSize="13sp"
+            android:textAllCaps="false"
+            android:paddingHorizontal="20dp"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:backgroundTint="#1976D2"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+
+</LinearLayout>

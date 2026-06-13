@@ -1,0 +1,166 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
+apply plugin: 'com.google.firebase.firebase-perf'
+apply plugin: 'kotlin-parcelize'
+
+def localProperties = new Properties()
+def localPropertiesFile = rootProject.file('local.properties')
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.withInputStream { stream ->
+        localProperties.load(stream)
+    }
+    localPropertiesFile.withReader('UTF-8') { reader ->
+        localProperties.load(reader)
+    }
+}
+android.buildFeatures.buildConfig true
+android {
+    defaultConfig {
+        applicationId "project.witty.keys"
+        compileSdk 35
+        minSdkVersion 26
+        targetSdkVersion 35
+        versionCode 65
+        versionName "7.1"
+        buildConfigField "String", "GIPHY_API_KEY", "\"${localProperties.getProperty('GIPHY_API_KEY')}\""
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        release {
+            if (project.hasProperty('MYAPP_UPLOAD_STORE_FILE')) {
+                storeFile file(MYAPP_UPLOAD_STORE_FILE)
+                storePassword MYAPP_UPLOAD_STORE_PASSWORD
+                keyAlias MYAPP_UPLOAD_KEY_ALIAS
+                keyPassword MYAPP_UPLOAD_KEY_PASSWORD
+            }
+        }
+    }
+    buildTypes {
+        debug {
+            // For real device via adb reverse: localhost (tunneled to Mac)
+            // For AVD emulator: "\"http://10.0.2.2:5001/tapai-e33d2/us-central1\""
+            // For local WiFi: "\"http://192.168.29.151:5001/tapai-e33d2/us-central1\""
+            // For production: "\"https://us-central1-tapai-e33d2.cloudfunctions.net\""
+            buildConfigField "String", "API_BASE_URL", "\"https://us-central1-tapai-e33d2.cloudfunctions.net\""
+        }
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+            buildConfigField "String", "API_BASE_URL", "\"https://us-central1-tapai-e33d2.cloudfunctions.net\""
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/INDEX.LIST'
+        exclude 'META-INF/DEPENDENCIES'
+    }
+    lint {
+        baseline = file("lint-baseline.xml")
+    }
+    namespace 'project.witty.keys'
+
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+            returnDefaultValues = true
+        }
+        animationsDisabled true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+
+    // Debug source set for test harness (SmartAssistantBarTestActivity)
+    // These files are ONLY included in debug builds and never ship to production.
+    // See: app/src/debug/java/project/witty/keys/debug/
+    sourceSets {
+        debug {
+            java.srcDirs += 'src/debug/java'
+            res.srcDirs += 'src/debug/res'
+            manifest.srcFile 'src/debug/AndroidManifest.xml'
+        }
+    }
+}
+
+dependencies {
+    // Android Testing dependencies
+    androidTestImplementation "androidx.test.ext:junit:1.1.5"
+    androidTestImplementation "androidx.test:runner:1.5.2"
+    androidTestImplementation "androidx.test:rules:1.5.0"
+    androidTestImplementation "androidx.test.uiautomator:uiautomator:2.2.0"
+    androidTestImplementation "androidx.test.espresso:espresso-core:3.5.1"
+    androidTestImplementation "androidx.test.espresso:espresso-intents:3.5.1"
+    androidTestImplementation "androidx.test:core-ktx:1.5.0"
+
+    // Kotlin
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.9.24"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.1"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1"
+
+    implementation 'com.squareup.okhttp3:okhttp:4.12.0'
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    // Import the BoM for the Firebase platform
+    implementation(platform("com.google.firebase:firebase-bom:33.7.0"))
+    implementation("com.google.firebase:firebase-auth")
+    implementation("com.google.firebase:firebase-firestore")
+    implementation("com.google.firebase:firebase-analytics") {
+        exclude group: "com.google.android.gms", module: "play-services-ads-identifier"
+        exclude group: "androidx.privacysandbox.ads", module: "ads-adservices"
+        exclude group: "androidx.privacysandbox.ads", module: "ads-adservices-java"
+    }
+    implementation 'com.google.firebase:firebase-functions'
+    implementation("com.google.firebase:firebase-crashlytics")
+    implementation("com.google.firebase:firebase-perf")
+    implementation("com.google.firebase:firebase-messaging")
+
+    implementation 'com.googlecode.libphonenumber:libphonenumber:8.12.57'
+    implementation 'androidx.viewpager2:viewpager2:1.1.0'
+    implementation 'com.google.android.play:review:2.0.2'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    // Also add the dependency for the Google Play services library and specify its version
+    implementation("com.google.android.gms:play-services-auth:21.3.0")
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'androidx.security:security-crypto:1.0.0'
+    implementation 'com.android.billingclient:billing:7.1.1'
+    implementation 'com.google.android.play:review:2.0.2'
+    implementation 'com.jakewharton.timber:timber:5.0.1'
+
+    //AI
+    implementation 'com.google.mlkit:language-id:17.0.6'
+
+    implementation 'nl.dionsegijn:konfetti-xml:2.0.2'
+    implementation 'com.giphy.sdk:ui:2.3.17'
+    implementation "io.noties.markwon:core:4.6.2"
+
+    // Room Database (Sprint 1 — Build 7.0)
+    def room_version = "2.6.1"
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+    // Optional - Kotlin Extensions and Coroutines support for Room
+    implementation "androidx.room:room-ktx:$room_version"
+    testImplementation "androidx.room:room-testing:$room_version"
+
+    // LiveData (Sprint 1 — Build 7.0)
+    implementation "androidx.lifecycle:lifecycle-livedata:2.7.0"
+    implementation "androidx.lifecycle:lifecycle-viewmodel:2.7.0"
+
+    // Unit Test dependencies
+    testImplementation "junit:junit:4.13.2"
+    testImplementation "io.mockk:mockk:1.13.12"
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.8.1"
+    testImplementation "app.cash.turbine:turbine:1.1.0"
+    testImplementation "org.robolectric:robolectric:4.13"
+    testImplementation 'com.squareup.okhttp3:mockwebserver:4.12.0'
+    testImplementation 'org.jetbrains.kotlin:kotlin-test:1.9.24'
+    testImplementation 'org.json:json:20231013'
+}

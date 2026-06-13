@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:id="@+id/wkBubbleUserText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:maxWidth="@dimen/wk_ds_bubble_max_width"
+        android:background="@drawable/bg_wk_msg_user"
+        android:paddingStart="@dimen/wk_ds_bubble_padding_h"
+        android:paddingEnd="@dimen/wk_ds_bubble_padding_h"
+        android:paddingTop="@dimen/wk_ds_bubble_padding_v"
+        android:paddingBottom="@dimen/wk_ds_bubble_padding_v"
+        android:textSize="14sp"
+        android:textColor="?attr/wkText" />
+</merge>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_app_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/action_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/setup_keyboard_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Set up Keyboard"
+            android:textColor="@color/third_app_color"
+            android:textFontWeight="900"
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/enable_instruction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/enable_instruction"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/fifth_app_color"
+            android:textFontWeight="500"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/choose_instruction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/choose_instruction"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/fifth_app_color"
+            android:textFontWeight="500"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/enable_default_instruction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/enable_default_instruction"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/fifth_app_color"
+            android:textFontWeight="500"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/reassurance_instruction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/reassurance_instruction"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/fifth_app_color"
+            android:textFontWeight="500"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/keyboard_settings_screenshot"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="32dp"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:src="@drawable/setup_graphics" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/go_to_settings_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:backgroundTint="@color/third_app_color"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="Open Settings"
+            android:textAllCaps="false"
+            android:textColor="@color/primary_app_color"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="32dp"
+            android:textFontWeight="900"
+            android:textSize="24dp"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.WittyKeys.Button.Circle" />
+
+    </LinearLayout>
+
+</LinearLayout>

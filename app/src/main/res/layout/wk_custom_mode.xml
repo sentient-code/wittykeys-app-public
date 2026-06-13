@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Task 2.13: Custom Mode Layout -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingStart="4dp"
+    android:paddingEnd="4dp">
+
+    <!-- Instruction Text (user types in host app) -->
+    <TextView
+        android:id="@+id/custom_prompt_input"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/wk_chip_height"
+        android:layout_weight="1"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:gravity="center_vertical"
+        android:text="@string/custom_mode_instruction"
+        android:textSize="@dimen/wk_text_chip"
+        android:textColor="@color/wk_text2"
+        android:textStyle="italic"
+        android:maxLines="1"
+        android:ellipsize="end" />
+
+    <!-- Generate Button -->
+    <TextView
+        android:id="@+id/generate_button"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/wk_chip_height"
+        android:layout_marginStart="6dp"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:gravity="center"
+        android:text="@string/generate"
+        android:textSize="@dimen/wk_text_chip"
+        android:textColor="@color/wk_text"
+        android:textStyle="bold"
+        android:background="@drawable/wk_chip_default"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <!-- Cancel Button (✕) -->
+    <TextView
+        android:id="@+id/cancel_custom_button"
+        android:layout_width="@dimen/wk_icon_button_size"
+        android:layout_height="@dimen/wk_icon_button_size"
+        android:layout_marginStart="6dp"
+        android:gravity="center"
+        android:text="✕"
+        android:textSize="14sp"
+        android:textColor="@color/wk_text2"
+        android:background="@drawable/wk_chip_default"
+        android:clickable="true"
+        android:focusable="true"
+        android:contentDescription="@string/cancel" />
+
+</LinearLayout>

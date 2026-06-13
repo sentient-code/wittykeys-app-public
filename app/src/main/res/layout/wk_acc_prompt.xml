@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Task 2.17: Accessibility Prompt Layout -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingStart="8dp"
+    android:paddingEnd="8dp">
+
+    <!-- 🔓 Lock Icon -->
+    <TextView
+        android:id="@+id/acc_prompt_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🔓"
+        android:textSize="18sp"
+        android:layout_marginEnd="8dp" />
+
+    <!-- Prompt Text (Note: accessibility_prompt_text alias for compatibility) -->
+    <TextView
+        android:id="@+id/accessibility_prompt_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/enable_ai_features"
+        android:textSize="@dimen/wk_text_chip"
+        android:textColor="@color/wk_text2"
+        android:maxLines="1"
+        android:ellipsize="end" />
+
+    <!-- Enable Button with gradient -->
+    <TextView
+        android:id="@+id/accessibility_enable_button"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/wk_chip_height"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:gravity="center"
+        android:text="@string/enable"
+        android:textSize="@dimen/wk_text_chip"
+        android:textColor="@color/wk_bg"
+        android:textStyle="bold"
+        android:background="@drawable/wk_button_gradient"
+        android:clickable="true"
+        android:focusable="true" />
+
+</LinearLayout>

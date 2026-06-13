@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Collapse/expand button: 28dp circle with gradient background, matching AI chip height -->
+<!-- Mockup: border-radius:50%; background:linear-gradient(surface3→surface2); border:1px solid rgba(255,255,255,0.10) -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <gradient
+                android:startColor="@color/wk_surface3"
+                android:endColor="@color/wk_surface2"
+                android:angle="135"/>
+            <stroke android:width="1dp" android:color="#1AFFFFFF"/>
+            <size android:width="@dimen/wk_ai_btn_min_height" android:height="@dimen/wk_ai_btn_min_height"/>
+        </shape>
+    </item>
+</layer-list>

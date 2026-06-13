@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ═══ SmartAssistantBar ═══ -->
+    <dimen name="wk_bar_height">101dp</dimen>
+    <dimen name="wk_row1_height">48dp</dimen>
+    <dimen name="wk_row2_height">48dp</dimen>
+    <dimen name="wk_bar_padding_horizontal">8dp</dimen>
+
+    <!-- ═══ Row 1 — Icon Buttons ═══ -->
+    <!-- .ov-icon: width:36px, height:36px, border-radius:50%, font-size:18px -->
+    <dimen name="wk_icon_btn_size">36dp</dimen>
+    <dimen name="wk_icon_btn_emoji_size">18sp</dimen>
+    <dimen name="wk_mic_icon_padding">6dp</dimen>
+    <!-- .ov-ai-btn: padding:5px 12px, border-radius:16px, font-size:11px, min-height:28px, gap:4px -->
+    <dimen name="wk_ai_btn_padding_vertical">5dp</dimen>
+    <dimen name="wk_ai_btn_padding_horizontal">12dp</dimen>
+    <dimen name="wk_ai_btn_radius">16dp</dimen>
+    <dimen name="wk_ai_btn_text_size">11sp</dimen>
+    <dimen name="wk_ai_btn_min_height">28dp</dimen>
+    <dimen name="wk_ai_btn_gap">4dp</dimen>
+    <!-- Row 1 gap between buttons: gap:3px -->
+    <dimen name="wk_row1_gap">3dp</dimen>
+
+    <!-- ═══ Row 2 — Reply Chips ═══ -->
+    <!-- .ov-chip: padding:7px 14px, border-radius:20px, font-size:12.5px, min-height:34px, gap:6px -->
+    <dimen name="wk_chip_padding_vertical">7dp</dimen>
+    <dimen name="wk_chip_padding_horizontal">14dp</dimen>
+    <dimen name="wk_chip_radius">20dp</dimen>
+    <dimen name="wk_chip_text_size">12sp</dimen>
+    <dimen name="wk_chip_min_height">34dp</dimen>
+    <dimen name="wk_chip_flag_size">9sp</dimen>
+    <!-- Row 2 gap: gap:8px -->
+    <dimen name="wk_row2_gap">8dp</dimen>
+    <dimen name="wk_row2_padding_horizontal">8dp</dimen>
+
+    <!-- ═══ Tone Picker Chips ═══ -->
+    <!-- .tone-pick: padding:5px 12px, border-radius:14px, font-size:11px, gap:4px -->
+    <dimen name="wk_tone_chip_padding_vertical">5dp</dimen>
+    <dimen name="wk_tone_chip_padding_horizontal">12dp</dimen>
+    <dimen name="wk_tone_chip_radius">14dp</dimen>
+    <dimen name="wk_tone_chip_text_size">11sp</dimen>
+    <dimen name="wk_tone_chip_gap">6dp</dimen>
+    <!-- Tone picker padding: padding:4px 8px -->
+    <dimen name="wk_tone_picker_padding_vertical">4dp</dimen>
+    <dimen name="wk_tone_picker_padding_horizontal">8dp</dimen>
+
+    <!-- ═══ Language Picker Chips ═══ -->
+    <!-- .lang-chip: padding:6px 14px, border-radius:16px, font-size:12px, gap:5px -->
+    <dimen name="wk_lang_chip_padding_vertical">6dp</dimen>
+    <dimen name="wk_lang_chip_padding_horizontal">14dp</dimen>
+    <dimen name="wk_lang_chip_radius">16dp</dimen>
+    <dimen name="wk_lang_chip_text_size">12sp</dimen>
+    <dimen name="wk_lang_chip_gap">6dp</dimen>
+
+    <!-- ═══ Context Chips (COLLAPSED Row 2) ═══ -->
+    <!-- .ov-ctx-chip: padding:6px 14px, border-radius:16px, font-size:11.5px, gap:4px -->
+    <dimen name="wk_ctx_chip_padding_vertical">6dp</dimen>
+    <dimen name="wk_ctx_chip_padding_horizontal">14dp</dimen>
+    <dimen name="wk_ctx_chip_radius">16dp</dimen>
+    <dimen name="wk_ctx_chip_text_size">11sp</dimen>
+    <dimen name="wk_ctx_chip_gap">4dp</dimen>
+
+    <!-- ═══ MemoryView ═══ -->
+    <!-- .mv-header: padding:2px 10px 0, height:20px -->
+    <dimen name="wk_mv_header_height">20dp</dimen>
+    <dimen name="wk_mv_header_padding_horizontal">10dp</dimen>
+    <dimen name="wk_mv_header_padding_top">2dp</dimen>
+    <!-- .mv-brain: width:28px, height:20px, font-size:16px -->
+    <dimen name="wk_mv_brain_width">28dp</dimen>
+    <dimen name="wk_mv_brain_height">20dp</dimen>
+    <dimen name="wk_mv_brain_emoji_size">16sp</dimen>
+    <!-- .mv-emotion: font-size:11px, gap:3px -->
+    <dimen name="wk_mv_emotion_text_size">11sp</dimen>
+    <!-- .mv-app-tag: font-size:9px, padding:1px 6px, border-radius:4px -->
+    <dimen name="wk_mv_app_tag_text_size">9sp</dimen>
+    <dimen name="wk_mv_app_tag_padding_vertical">1dp</dimen>
+    <dimen name="wk_mv_app_tag_padding_horizontal">6dp</dimen>
+    <dimen name="wk_mv_app_tag_radius">4dp</dimen>
+    <!-- .mv-expand: width:28px, height:20px, font-size:14px -->
+    <dimen name="wk_mv_expand_size">28dp</dimen>
+    <!-- .mv-scroll-area: padding:2px 10px 4px -->
+    <dimen name="wk_mv_scroll_padding_horizontal">10dp</dimen>
+    <dimen name="wk_mv_scroll_padding_top">2dp</dimen>
+    <dimen name="wk_mv_scroll_padding_bottom">4dp</dimen>
+    <!-- .mv-summary: font-size:11px, max 3 lines -->
+    <dimen name="wk_mv_summary_text_size">11sp</dimen>
+    <!-- .mv-scroll-hint: font-size:8px, padding:6px 0 1px, letter-spacing:0.5px, opacity:0.4 -->
+    <dimen name="wk_mv_scroll_hint_size">8sp</dimen>
+    <!-- .mv-reply-card: padding:6px 10px, border-radius:12px, gap:8px -->
+    <dimen name="wk_mv_reply_padding_vertical">6dp</dimen>
+    <dimen name="wk_mv_reply_padding_horizontal">10dp</dimen>
+    <dimen name="wk_mv_reply_radius">12dp</dimen>
+    <dimen name="wk_mv_reply_gap">4dp</dimen>
+    <!-- .mv-reply-text: font-size:12px -->
+    <dimen name="wk_mv_reply_text_size">12sp</dimen>
+    <!-- .mv-reply-flag: font-size:9px -->
+    <dimen name="wk_mv_reply_flag_size">9sp</dimen>
+
+    <!-- ═══ Predictions (COLLAPSED Row 1) ═══ -->
+    <!-- .ov-pred: padding:4px 12px, font-size:13px, border-radius:8px -->
+    <dimen name="wk_pred_padding_vertical">4dp</dimen>
+    <dimen name="wk_pred_padding_horizontal">12dp</dimen>
+    <dimen name="wk_pred_text_size">13sp</dimen>
+    <dimen name="wk_pred_radius">8dp</dimen>
+    <!-- .ov-pred-divider: width:1px, height:18px -->
+    <dimen name="wk_pred_divider_width">1dp</dimen>
+    <dimen name="wk_pred_divider_height">18dp</dimen>
+
+    <!-- ═══ Shimmer (Loading) ═══ -->
+    <!-- .ov-shimmer: height:28px, border-radius:14px -->
+    <dimen name="wk_shimmer_height">28dp</dimen>
+    <dimen name="wk_shimmer_radius">14dp</dimen>
+    <!-- .ov-shimmer.short: max-width:100px -->
+    <dimen name="wk_shimmer_short">100dp</dimen>
+    <!-- .ov-shimmer.med: max-width:140px -->
+    <dimen name="wk_shimmer_med">140dp</dimen>
+    <!-- .ov-shimmer.long: max-width:180px -->
+    <dimen name="wk_shimmer_long">180dp</dimen>
+
+    <!-- ═══ Custom Mode ═══ -->
+    <!-- .ov-custom-btn: padding:5px 14px, border-radius:14px, font-size:11px -->
+    <dimen name="wk_custom_btn_padding_vertical">5dp</dimen>
+    <dimen name="wk_custom_btn_padding_horizontal">14dp</dimen>
+    <dimen name="wk_custom_btn_radius">14dp</dimen>
+    <dimen name="wk_custom_btn_text_size">11sp</dimen>
+    <!-- .ov-custom-msg: font-size:12px (italic) -->
+    <dimen name="wk_custom_msg_text_size">12sp</dimen>
+
+    <!-- ═══ Accessibility Prompt ═══ -->
+    <!-- .ov-acc-btn: padding:6px 16px, border-radius:16px, font-size:11px -->
+    <dimen name="wk_acc_btn_padding_vertical">6dp</dimen>
+    <dimen name="wk_acc_btn_padding_horizontal">16dp</dimen>
+    <dimen name="wk_acc_btn_radius">16dp</dimen>
+    <dimen name="wk_acc_btn_text_size">11sp</dimen>
+
+    <!-- ═══ Tone Active Row ═══ -->
+    <!-- .tone-pinned: padding:6px 10px, border-radius:16px, font-size:11px -->
+    <dimen name="wk_tone_pinned_padding_vertical">6dp</dimen>
+    <dimen name="wk_tone_pinned_padding_horizontal">10dp</dimen>
+    <dimen name="wk_tone_pinned_radius">16dp</dimen>
+    <dimen name="wk_tone_pinned_text_size">11sp</dimen>
+    <!-- .tone-pinned margin: margin:0 4px 0 8px -->
+    <dimen name="wk_tone_pinned_margin_start">8dp</dimen>
+    <dimen name="wk_tone_pinned_margin_end">4dp</dimen>
+    <!-- .tp-x: width:16px, height:16px, font-size:10px -->
+    <dimen name="wk_tone_close_size">16dp</dimen>
+    <dimen name="wk_tone_close_text_size">10sp</dimen>
+    <!-- .regen-btn: width:34px, height:34px, font-size:14px -->
+    <dimen name="wk_regen_btn_size">34dp</dimen>
+    <dimen name="wk_regen_btn_emoji_size">14sp</dimen>
+    <dimen name="wk_regen_btn_margin_end">6dp</dimen>
+
+    <!-- ═══ Stats Cards ═══ -->
+    <!-- .stat-card: border-radius:20px, padding:4px 12px, gap:6px -->
+    <dimen name="wk_stat_card_radius">20dp</dimen>
+    <dimen name="wk_stat_card_padding_vertical">4dp</dimen>
+    <dimen name="wk_stat_card_padding_horizontal">12dp</dimen>
+    <dimen name="wk_stat_card_gap">6dp</dimen>
+    <!-- .stat-icon: font-size:12px -->
+    <dimen name="wk_stat_icon_size">12sp</dimen>
+    <!-- .stat-number: font-size:14px -->
+    <dimen name="wk_stat_number_size">14sp</dimen>
+    <!-- .stat-label: font-size:9px -->
+    <dimen name="wk_stat_label_size">9sp</dimen>
+    <!-- Stats header: height:22px, padding:2px 10px 0 -->
+    <dimen name="wk_stats_header_height">22dp</dimen>
+    <!-- Stats title: font-size:10px -->
+    <dimen name="wk_stats_title_size">10sp</dimen>
+    <!-- Stats close: width:22px, height:22px, font-size:12px -->
+    <dimen name="wk_stats_close_size">22dp</dimen>
+    <!-- Cards container: gap:6px, padding:4px 10px 6px -->
+    <dimen name="wk_stats_cards_gap">6dp</dimen>
+
+    <!-- ═══ MV Loading ═══ -->
+    <!-- .mv-pulse-brain: font-size:20px -->
+    <dimen name="wk_mv_loading_brain_size">20sp</dimen>
+    <!-- .mv-loading-label: font-size:11px -->
+    <dimen name="wk_mv_loading_label_size">11sp</dimen>
+    <!-- .mv-dot: width:5px, height:5px -->
+    <dimen name="wk_mv_dot_size">5dp</dimen>
+    <!-- .mv-loading-dots: gap:4px -->
+    <dimen name="wk_mv_dot_gap">4dp</dimen>
+
+    <!-- ═══ MV Error ═══ -->
+    <!-- .mv-error-visual: width:40px, height:40px, border-radius:12px, font-size:18px -->
+    <dimen name="wk_mv_error_icon_container_size">40dp</dimen>
+    <dimen name="wk_mv_error_icon_radius">12dp</dimen>
+    <dimen name="wk_mv_error_icon_size">18sp</dimen>
+    <!-- .mv-error-title: font-size:12px -->
+    <dimen name="wk_mv_error_title_size">12sp</dimen>
+    <!-- .mv-error-desc: font-size:10px -->
+    <dimen name="wk_mv_error_desc_size">10sp</dimen>
+
+    <!-- ═══ Bottom Sheet ═══ -->
+    <!-- .bs-handle: width:36px, height:4px, border-radius:2px -->
+    <dimen name="wk_bs_handle_width">36dp</dimen>
+    <dimen name="wk_bs_handle_height">4dp</dimen>
+    <dimen name="wk_bs_handle_radius">2dp</dimen>
+    <!-- .bs-back/.bs-close: width:32px, height:32px -->
+    <dimen name="wk_bs_nav_btn_size">32dp</dimen>
+    <!-- .bs-title: font-size:15px -->
+    <dimen name="wk_bs_title_size">15sp</dimen>
+    <!-- .bs-sheet: border-radius:20px top -->
+    <dimen name="wk_bs_sheet_radius">20dp</dimen>
+
+    <!-- ═══ Consent Sheet ═══ -->
+    <!-- .bs-consent-icon: width:56px, height:56px, border-radius:16px, font-size:28px -->
+    <dimen name="wk_consent_icon_size">56dp</dimen>
+    <dimen name="wk_consent_icon_radius">16dp</dimen>
+    <dimen name="wk_consent_icon_emoji_size">28sp</dimen>
+    <!-- .bs-consent-title: font-size:17px -->
+    <dimen name="wk_consent_title_size">17sp</dimen>
+    <!-- .bs-consent-subtitle: font-size:12px -->
+    <dimen name="wk_consent_subtitle_size">12sp</dimen>
+    <!-- .bs-feature-icon: width:32px, height:32px, border-radius:10px, font-size:15px -->
+    <dimen name="wk_feature_icon_size">32dp</dimen>
+    <dimen name="wk_feature_icon_radius">10dp</dimen>
+    <!-- .bs-feature-name: font-size:13px -->
+    <dimen name="wk_feature_name_size">13sp</dimen>
+    <!-- .bs-feature-desc: font-size:11px -->
+    <dimen name="wk_feature_desc_size">11sp</dimen>
+    <!-- .bs-privacy-note: padding:8px 12px, border-radius:10px, font-size:11px -->
+    <dimen name="wk_privacy_note_padding">8dp</dimen>
+    <dimen name="wk_privacy_note_radius">10dp</dimen>
+    <!-- .bs-btn: padding:12px 16px, border-radius:14px, font-size:14px -->
+    <dimen name="wk_bs_btn_padding_vertical">12dp</dimen>
+    <dimen name="wk_bs_btn_padding_horizontal">16dp</dimen>
+    <dimen name="wk_bs_btn_radius">14dp</dimen>
+    <dimen name="wk_bs_btn_text_size">14sp</dimen>
+
+    <!-- ═══ Milestone Toast ═══ -->
+    <!-- .milestone-toast: padding:5px 18px, border-radius:14px, font-size:11px -->
+    <dimen name="wk_milestone_padding_vertical">5dp</dimen>
+    <dimen name="wk_milestone_padding_horizontal">18dp</dimen>
+    <dimen name="wk_milestone_radius">14dp</dimen>
+    <dimen name="wk_milestone_text_size">11sp</dimen>
+
+    <!-- ═══ Grammar Done Row ═══ -->
+    <!-- .grammar-done: height:48px, padding:0 12px, gap:8px -->
+    <!-- .grammar-icon: font-size:18px -->
+    <dimen name="wk_grammar_icon_size">18sp</dimen>
+    <!-- .grammar-msg: font-size:12px -->
+    <dimen name="wk_grammar_msg_size">12sp</dimen>
+    <!-- .grammar-msg .original: font-size:11px -->
+    <dimen name="wk_grammar_original_size">11sp</dimen>
+    <!-- .grammar-undo: padding:5px 14px, border-radius:12px, font-size:11px -->
+    <dimen name="wk_grammar_btn_padding_vertical">5dp</dimen>
+    <dimen name="wk_grammar_btn_padding_horizontal">14dp</dimen>
+    <dimen name="wk_grammar_btn_radius">12dp</dimen>
+    <dimen name="wk_grammar_btn_text_size">11sp</dimen>
+
+    <!-- ═══ Hinglish Badge ═══ -->
+    <!-- .hinglish-badge: font-size:8px, padding:1px 5px, border-radius:6px -->
+    <dimen name="wk_hinglish_badge_text_size">8sp</dimen>
+    <dimen name="wk_hinglish_badge_padding_vertical">1dp</dimen>
+    <dimen name="wk_hinglish_badge_padding_horizontal">5dp</dimen>
+    <dimen name="wk_hinglish_badge_radius">6dp</dimen>
+</resources>

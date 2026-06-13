@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Task 2.14: Shimmer Loading Layout -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingStart="4dp"
+    android:paddingEnd="4dp">
+
+    <!-- Long shimmer chip (180dp) -->
+    <View
+        android:id="@+id/shimmer_chip_1"
+        android:layout_width="@dimen/wk_shimmer_chip_long"
+        android:layout_height="@dimen/wk_chip_height"
+        android:layout_marginEnd="@dimen/wk_row2_chip_gap"
+        android:background="@drawable/wk_shimmer_gradient" />
+
+    <!-- Medium shimmer chip (140dp) -->
+    <View
+        android:id="@+id/shimmer_chip_2"
+        android:layout_width="@dimen/wk_shimmer_chip_medium"
+        android:layout_height="@dimen/wk_chip_height"
+        android:layout_marginEnd="@dimen/wk_row2_chip_gap"
+        android:background="@drawable/wk_shimmer_gradient" />
+
+    <!-- Short shimmer chip (100dp) -->
+    <View
+        android:id="@+id/shimmer_chip_3"
+        android:layout_width="@dimen/wk_shimmer_chip_short"
+        android:layout_height="@dimen/wk_chip_height"
+        android:background="@drawable/wk_shimmer_gradient" />
+
+</LinearLayout>

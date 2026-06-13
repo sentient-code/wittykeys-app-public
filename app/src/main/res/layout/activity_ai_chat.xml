@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="@color/wk_bg">
+
+    <!-- DS Chat Header -->
+    <project.witty.keys.ui.chat.WkChatHeader
+        android:id="@+id/fs_chat_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- Chat container (visible in chat mode) -->
+    <FrameLayout
+        android:id="@+id/fs_chat_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- Chat RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fs_chat_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            android:clipToPadding="false"
+            android:scrollbars="none" />
+
+        <project.witty.keys.ui.chat.WkEmptyState
+            android:id="@+id/fs_empty_state"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <!-- Session list container (hidden by default, shown when list button tapped) -->
+    <LinearLayout
+        android:id="@+id/fs_session_list_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <project.witty.keys.ui.chat.WkDualCtaRow
+            android:id="@+id/fs_session_cta_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/fs_session_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="8dp"
+                android:clipToPadding="false"
+                android:scrollbars="none" />
+
+            <project.witty.keys.ui.chat.WkEmptyState
+                android:id="@+id/fs_sessions_empty_state"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- New Chat button (mockup: fs-new-chat-btn) -->
+    <TextView
+        android:id="@+id/fs_new_chat_btn"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:text="+ New Chat"
+        android:textSize="15sp"
+        android:textColor="#FFFFFF"
+        android:fontFamily="sans-serif-medium"
+        android:background="@drawable/wk_new_chat_btn_bg"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="12dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone" />
+
+    <!-- DS Input Bar — no capture for fullscreen -->
+    <project.witty.keys.ui.chat.WkInputBar
+        android:id="@+id/fs_input_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

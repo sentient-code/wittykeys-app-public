@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Hover state reply chip background - matching mockup -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/wk_chip_hover" />
+    <stroke
+        android:width="@dimen/wk_chip_border_width"
+        android:color="@color/wk_accent_glow" />
+    <corners android:radius="@dimen/wk_chip_radius" />
+</shape>

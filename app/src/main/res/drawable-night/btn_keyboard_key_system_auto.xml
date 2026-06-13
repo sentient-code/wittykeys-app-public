@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Auto-switching key background for system theme (dark mode override) -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true" android:drawable="@drawable/modern_key_shape_pressed_lxx_dark" />
+    <item android:drawable="@drawable/modern_key_shape_lxx_dark" />
+</selector>

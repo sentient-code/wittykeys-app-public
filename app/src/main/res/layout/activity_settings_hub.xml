@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wk_app_shell_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="104dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/settings_top_identity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="24dp"
+            android:paddingBottom="8dp">
+
+            <ImageView
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:background="@drawable/wk_logo_rounded_square_bg"
+                android:clipToOutline="true"
+                android:contentDescription="WittyKeys logo"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_witty_logo" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Settings"
+                    android:textColor="@color/wk_overlay_dark_text"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Account, plan, setup, help"
+                    android:textColor="@color/wk_overlay_dark_text2"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/settings_profile_button"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:background="@drawable/wk_app_card_quiet_bg"
+                android:contentDescription="Open account"
+                android:padding="14dp"
+                android:src="@drawable/user_icon"
+                app:tint="@color/wk_overlay_dark_text" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:fillViewport="true"
+            android:overScrollMode="never"
+            android:paddingBottom="24dp"
+            android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="18dp"
+            android:paddingTop="18dp"
+            android:paddingBottom="28dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Choose what you need. Setup and privacy details are grouped so this page stays simple."
+                android:textColor="@color/wk_overlay_dark_text2"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:id="@+id/settings_account_row"
+                style="@style/WkSettingsRow">
+
+                <FrameLayout style="@style/WkSettingsIconFrame">
+                    <ImageView
+                        style="@style/WkSettingsIconImage"
+                        android:contentDescription="Account"
+                        android:src="@drawable/settings_icon" />
+                </FrameLayout>
+
+                <LinearLayout style="@style/WkSettingsCopy">
+                    <TextView
+                        style="@style/WkSettingsTitle"
+                        android:text="Account" />
+
+                    <TextView
+                        style="@style/WkSettingsSubtitle"
+                        android:text="Sign in, profile, and account controls." />
+                </LinearLayout>
+
+                <TextView
+                    style="@style/WkSettingsValue"
+                    android:text="Open" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/settings_subscription_row"
+                style="@style/WkSettingsRow">
+
+                <FrameLayout style="@style/WkSettingsIconFrame">
+                    <ImageView
+                        style="@style/WkSettingsIconImage"
+                        android:contentDescription="Subscription"
+                        android:src="@drawable/ic_check_circle_24" />
+                </FrameLayout>
+
+                <LinearLayout style="@style/WkSettingsCopy">
+                    <TextView
+                        style="@style/WkSettingsTitle"
+                        android:text="Subscription" />
+
+                    <TextView
+                        style="@style/WkSettingsSubtitle"
+                        android:text="View plans or restore purchase." />
+                </LinearLayout>
+
+                <TextView
+                    style="@style/WkSettingsChevron"
+                    android:text=">" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/settings_ai_usage_row"
+                style="@style/WkSettingsRow">
+
+                <FrameLayout style="@style/WkSettingsIconFrame">
+                    <ImageView
+                        style="@style/WkSettingsIconImage"
+                        android:contentDescription="AI usage"
+                        android:src="@drawable/ic_brain" />
+                </FrameLayout>
+
+                <LinearLayout style="@style/WkSettingsCopy">
+                    <TextView
+                        style="@style/WkSettingsTitle"
+                        android:text="AI usage" />
+
+                    <TextView
+                        style="@style/WkSettingsSubtitle"
+                        android:text="Daily AI actions and upgrade option." />
+                </LinearLayout>
+
+                <TextView
+                    style="@style/WkSettingsValue"
+                    android:text="20/day" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/settings_app_setup_row"
+                style="@style/WkSettingsRow">
+
+                <FrameLayout style="@style/WkSettingsIconFrame">
+                    <ImageView
+                        style="@style/WkSettingsIconImage"
+                        android:contentDescription="App setup"
+                        android:src="@drawable/wk_logo_overlay" />
+                </FrameLayout>
+
+                <LinearLayout style="@style/WkSettingsCopy">
+                    <TextView
+                        style="@style/WkSettingsTitle"
+                        android:text="App setup" />
+
+                    <TextView
+                        style="@style/WkSettingsSubtitle"
+                        android:text="Overlay, Keyboard, and permissions." />
+                </LinearLayout>
+
+                <TextView
+                    style="@style/WkSettingsValue"
+                    android:text="Open" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/settings_help_privacy_row"
+                style="@style/WkSettingsRow">
+
+                <FrameLayout style="@style/WkSettingsIconFrame">
+                    <ImageView
+                        style="@style/WkSettingsIconImage"
+                        android:contentDescription="Help and privacy"
+                        android:src="@drawable/mail_icon" />
+                </FrameLayout>
+
+                <LinearLayout style="@style/WkSettingsCopy">
+                    <TextView
+                        style="@style/WkSettingsTitle"
+                        android:text="Help &amp; privacy" />
+
+                    <TextView
+                        style="@style/WkSettingsSubtitle"
+                        android:text="WhatsApp, email, privacy policy, and terms." />
+                </LinearLayout>
+
+                <TextView
+                    style="@style/WkSettingsChevron"
+                    android:text=">" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/settings_version_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:gravity="center"
+                android:textColor="@color/wk_overlay_dark_text2"
+                android:textSize="12sp"
+                android:text="Version" />
+        </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/settings_bottom_nav"
+        style="@style/WkAppBottomNav"
+        android:layout_gravity="bottom">
+
+        <TextView
+            android:id="@+id/settings_nav_home"
+            style="@style/WkAppBottomNavItem"
+            android:text="Home" />
+
+        <TextView
+            android:id="@+id/settings_nav_usage"
+            style="@style/WkAppBottomNavItem"
+            android:text="Usage" />
+
+        <TextView
+            android:id="@+id/settings_nav_settings"
+            style="@style/WkAppBottomNavItemActive"
+            android:text="Settings" />
+    </LinearLayout>
+</FrameLayout>

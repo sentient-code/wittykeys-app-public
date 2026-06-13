@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:id="@+id/wkInputBarContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/wk_ds_input_bar_padding_h"
+        android:paddingEnd="@dimen/wk_ds_input_bar_padding_h"
+        android:paddingTop="@dimen/wk_ds_input_bar_padding_top"
+        android:paddingBottom="@dimen/wk_ds_input_bar_padding_bottom"
+        android:background="@drawable/wk_ds_input_bar_bg">
+
+        <ImageView
+            android:id="@+id/wkInputCapture"
+            android:layout_width="@dimen/wk_ds_icon_btn"
+            android:layout_height="@dimen/wk_ds_icon_btn"
+            android:layout_marginEnd="8dp"
+            android:padding="9dp"
+            android:src="@drawable/ic_wk_capture"
+            android:background="@drawable/bg_wk_icon_btn"
+            android:contentDescription="@string/wk_ds_capture_cd"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <project.witty.keys.keyboard.internal.InternalChatInput
+            android:id="@+id/wkInputPill"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minHeight="@dimen/wk_ds_input_pill_min_height"
+            android:maxHeight="@dimen/wk_ds_input_pill_max_height"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/bg_wk_msg_ai"
+            android:textSize="14sp"
+            android:textColor="?attr/wkText"
+            android:textColorHint="@color/wk_text_dim"
+            android:hint="@string/wk_ds_input_hint_default"
+            android:inputType="textMultiLine|textCapSentences" />
+
+        <TextView
+            android:id="@+id/wkInputSend"
+            android:layout_width="@dimen/wk_ds_icon_btn"
+            android:layout_height="@dimen/wk_ds_icon_btn"
+            android:gravity="center"
+            android:text="↑"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:background="@drawable/bg_wk_send_circle"
+            android:alpha="0.4"
+            android:contentDescription="@string/wk_ds_send_cd"
+            android:clickable="true"
+            android:focusable="true" />
+    </LinearLayout>
+</merge>

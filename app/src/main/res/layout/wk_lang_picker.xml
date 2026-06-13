@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Task 2.12: Language Picker Layout - 9 languages + Custom -->
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:id="@+id/lang_chips_container"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp">
+
+        <!-- 9 Language Chips with flags -->
+
+        <TextView
+            android:id="@+id/lang_english"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/wk_chip_height"
+            android:layout_marginEnd="@dimen/wk_row2_chip_gap"
+            android:paddingStart="@dimen/wk_lang_chip_padding_h"
+            android:paddingEnd="@dimen/wk_lang_chip_padding_h"
+            android:paddingTop="@dimen/wk_lang_chip_padding_v"
+            android:paddingBottom="@dimen/wk_lang_chip_padding_v"
+            android:gravity="center"
+            android:tag="English"
+            android:text="🇬🇧 English"
+            android:textSize="@dimen/wk_text_chip"
+            android:textColor="@color/wk_text2"
+            android:background="@drawable/wk_chip_default"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <TextView
+            android:id="@+id/lang_hindi"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/wk_chip_height"
+            android:layout_marginEnd="@dimen/wk_row2_chip_gap"
+            android:paddingStart="@dimen/wk_lang_chip_padding_h"
+            android:paddingEnd="@dimen/wk_lang_chip_padding_h"
+            android:paddingTop="@dimen/wk_lang_chip_padding_v"
+            android:paddingBottom="@dimen/wk_lang_chip_padding_v"
+            android:gravity="center"
+            android:tag="Hindi"
+            android:text="🇮🇳 Hindi"
+            android:textSize="@dimen/wk_text_chip"
+            android:textColor="@color/wk_text2"
+            android:background="@drawable/wk_chip_default"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <TextView
+            android:id="@+id/lang_spanish"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/wk_chip_height"
+            android:layout_marginEnd="@dimen/wk_row2_chip_gap"
+            android:paddingStart="@dimen/wk_lang_chip_padding_h"
+            android:paddingEnd="@dimen/wk_lang_chip_padding_h"
+            android:paddingTop="@dimen/wk_lang_chip_padding_v"
+            android:paddingBottom="@dimen/wk_lang_chip_padding_v"
+            android:gravity="center"
+            android:tag="Spanish"
+            android:text="🇪🇸 Spanish"
+            android:textSize="@dimen/wk_text_chip"
+            android:textColor="@color/wk_text2"
+            android:background="@drawable/wk_chip_default"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <TextView
+            android:id="@+id/lang_french"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/wk_chip_height"
+            android:layout_marginEnd="@dimen/wk_row2_chip_gap"
+            android:paddingStart="@dimen/wk_lang_chip_padding_h"
+            android:paddingEnd="@dimen/wk_lang_chip_padding_h"
+            android:paddingTop="@dimen/wk_lang_chip_padding_v"
+            android:paddingBottom="@dimen/wk_lang_chip_padding_v"
+            android:gravity="center"
+            android:tag="French"
+            android:text="🇫🇷 French"
+            android:textSize="@dimen/wk_text_chip"
+            android:textColor="@color/wk_text2"
+            android:background="@drawable/wk_chip_default"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <TextView
+            android:id="@+id/lang_german"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/wk_chip_height"
+            android:layout_marginEnd="@dimen/wk_row2_chip_gap"
+            android:paddingStart="@dimen/wk_lang_chip_padding_h"
+            android:paddingEnd="@dimen/wk_lang_chip_padding_h"
+            android:paddingTop="@dimen/wk_lang_chip_padding_v"
+            android:paddingBottom="@dimen/wk_lang_chip_padding_v"
+            android:gravity="center"
+            android:tag="German"
+            android:text="🇩🇪 German"
+            android:textSize="@dimen/wk_text_chip"
+            android:textColor="@color/wk_text2"
+            android:background="@drawable/wk_chip_default"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <TextView
+            android:id="@+id/lang_japanese"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/wk_chip_height"
+            android:layout_marginEnd="@dimen/wk_row2_chip_gap"
+            android:paddingStart="@dimen/wk_lang_chip_padding_h"
+            android:paddingEnd="@dimen/wk_lang_chip_padding_h"
+            android:paddingTop="@dimen/wk_lang_chip_padding_v"
+            android:paddingBottom="@dimen/wk_lang_chip_padding_v"
+            android:gravity="center"
+            android:tag="Japanese"
+            android:text="🇯🇵 Japanese"
+            android:textSize="@dimen/wk_text_chip"
+            android:textColor="@color/wk_text2"
+            android:background="@drawable/wk_chip_default"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <TextView
+            android:id="@+id/lang_korean"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/wk_chip_height"
+            android:layout_marginEnd="@dimen/wk_row2_chip_gap"
+            android:paddingStart="@dimen/wk_lang_chip_padding_h"
+            android:paddingEnd="@dimen/wk_lang_chip_padding_h"
+            android:paddingTop="@dimen/wk_lang_chip_padding_v"
+            android:paddingBottom="@dimen/wk_lang_chip_padding_v"
+            android:gravity="center"
+            android:tag="Korean"
+            android:text="🇰🇷 Korean"
+            android:textSize="@dimen/wk_text_chip"
+            android:textColor="@color/wk_text2"
+            android:background="@drawable/wk_chip_default"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <TextView
+            android:id="@+id/lang_chinese"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/wk_chip_height"
+            android:layout_marginEnd="@dimen/wk_row2_chip_gap"
+            android:paddingStart="@dimen/wk_lang_chip_padding_h"
+            android:paddingEnd="@dimen/wk_lang_chip_padding_h"
+            android:paddingTop="@dimen/wk_lang_chip_padding_v"
+            android:paddingBottom="@dimen/wk_lang_chip_padding_v"
+            android:gravity="center"
+            android:tag="Chinese"
+            android:text="🇨🇳 Chinese"
+            android:textSize="@dimen/wk_text_chip"
+            android:textColor="@color/wk_text2"
+            android:background="@drawable/wk_chip_default"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <TextView
+            android:id="@+id/lang_arabic"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/wk_chip_height"
+            android:layout_marginEnd="@dimen/wk_row2_chip_gap"
+            android:paddingStart="@dimen/wk_lang_chip_padding_h"
+            android:paddingEnd="@dimen/wk_lang_chip_padding_h"
+            android:paddingTop="@dimen/wk_lang_chip_padding_v"
+            android:paddingBottom="@dimen/wk_lang_chip_padding_v"
+            android:gravity="center"
+            android:tag="Arabic"
+            android:text="🇸🇦 Arabic"
+            android:textSize="@dimen/wk_text_chip"
+            android:textColor="@color/wk_text2"
+            android:background="@drawable/wk_chip_default"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <!-- ✏️ Custom (at end) -->
+        <TextView
+            android:id="@+id/lang_custom"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/wk_chip_height"
+            android:paddingStart="@dimen/wk_lang_chip_padding_h"
+            android:paddingEnd="@dimen/wk_lang_chip_padding_h"
+            android:paddingTop="@dimen/wk_lang_chip_padding_v"
+            android:paddingBottom="@dimen/wk_lang_chip_padding_v"
+            android:gravity="center"
+            android:tag="Custom"
+            android:text="✏️ Custom"
+            android:textSize="@dimen/wk_text_chip"
+            android:textColor="@color/wk_accent"
+            android:background="@drawable/wk_chip_custom"
+            android:clickable="true"
+            android:focusable="true" />
+
+    </LinearLayout>
+
+</HorizontalScrollView>

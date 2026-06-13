@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:id="@+id/wkSessionCardRoot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_wk_session_card"
+        android:padding="@dimen/wk_ds_session_card_padding"
+        android:clickable="false"
+        android:focusable="false">
+
+        <!-- Row 1: title + timestamp -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <View
+                android:id="@+id/wkCardUnreadDot"
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:background="@drawable/bg_wk_source_tag_kbd"
+                android:layout_marginEnd="6dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/wkCardTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="?attr/wkText"
+                android:ellipsize="end"
+                android:maxLines="1" />
+
+            <TextView
+                android:id="@+id/wkCardTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="11sp"
+                android:textColor="@color/wk_text_dim"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <!-- Row 2: preview text -->
+        <TextView
+            android:id="@+id/wkCardPreview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/wk_text_sec"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:layout_marginTop="@dimen/wk_ds_session_card_gap" />
+
+        <!-- Row 3: source tag pill (left) + delete icon (right) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp">
+
+            <project.witty.keys.ui.chat.WkSourceTag
+                android:id="@+id/wkCardSource"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/wkCardDelete"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_wk_delete"
+                android:clickable="true"
+                android:focusable="true"
+                android:contentDescription="Delete session" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</merge>

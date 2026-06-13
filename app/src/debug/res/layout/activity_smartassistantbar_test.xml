@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Test harness layout for SmartAssistantBar visual testing.
+    Simulates the keyboard context: full width, dark background,
+    SmartAssistantBar at the bottom (matching production layout in main_keyboard_frame.xml).
+
+    WittyKeys Automated Visual QA & Log Analysis Testing System
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/test_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF1E1E2E">
+
+    <!-- Status bar at top showing current test state -->
+    <LinearLayout
+        android:id="@+id/test_status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:background="#FF11111B">
+
+        <TextView
+            android:id="@+id/test_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SAB Test Harness"
+            android:textColor="#FFCDD6F4"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/test_state_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="State: IDLE"
+            android:textColor="#FFA6ADC8"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/test_theme_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Theme: Dracula (7)"
+            android:textColor="#FFA6ADC8"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <!--
+        SmartAssistantBar container at bottom.
+        Matches production embedding in main_keyboard_frame.xml:
+        - Parent is LinearLayout (vertical)
+        - SAB is match_parent width, wrap_content height
+        - Sits above the keyboard view
+    -->
+    <LinearLayout
+        android:id="@+id/keyboard_block_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical">
+
+        <project.witty.keys.keyboard.AssistantViews.SmartAssistantBar
+            android:id="@+id/smart_assistant_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- NOTE: Real keyboard is used for visual tests via FullKeyboardVisualTest -->
+    </LinearLayout>
+
+</FrameLayout>

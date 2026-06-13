@@ -1,0 +1,15 @@
+.gradle/
+build/
+app/build/
+local.properties
+*.keystore
+*.jks
+*.pem
+*.p8
+.env
+.env.*
+app/google-services.json
+.idea/
+.DS_Store
+captures/
+logs/

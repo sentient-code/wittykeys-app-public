@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/overlay_bubble_root"
+    android:layout_width="52dp"
+    android:layout_height="52dp"
+    android:background="@drawable/overlay_bubble_circle"
+    android:elevation="8dp">
+
+    <!-- WittyKeys "W" logo — visible when idle -->
+    <ImageView
+        android:id="@+id/overlay_bubble_logo"
+        android:layout_width="24dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center"
+        android:src="@drawable/wk_logo_overlay"
+        android:contentDescription="WittyKeys AI Assistant" />
+
+    <!-- ✕ close — visible when popup is open -->
+    <TextView
+        android:id="@+id/overlay_bubble_close"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="✕"
+        android:textSize="22sp"
+        android:textColor="@color/wk_overlay_dark_text"
+        android:visibility="gone"
+        android:contentDescription="Close overlay" />
+
+    <!-- Notification badge -->
+    <TextView
+        android:id="@+id/overlay_bubble_badge"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="-3dp"
+        android:layout_marginEnd="-3dp"
+        android:background="@drawable/overlay_badge_bg"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:contentDescription="Notification count" />
+
+
+</FrameLayout>

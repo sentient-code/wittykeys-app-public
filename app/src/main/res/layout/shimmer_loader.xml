@@ -1,0 +1,37 @@
+<!-- view_shimmer_loader.xml -->
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_tone_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Add your placeholder views here -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="24dp">
+
+            <View
+                android:layout_width="240dp"
+                android:layout_height="32dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/shimmer_rounded_corner_background" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/shimmer_rounded_corner_background" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/shimmer_rounded_corner_background" />
+
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+</merge>

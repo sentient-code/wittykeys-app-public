@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/primary_app_color"
+    android:elevation="4dp"
+    android:theme="@style/ThemeOverlay.Material3.ActionBar"
+    app:popupTheme="@style/ThemeOverlay.Material3.Light"
+    android:paddingTop="24dp"
+    >
+
+    <LinearLayout
+        android:id="@+id/toolbar_content_start"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:id="@+id/toolbar_logo"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:contentDescription="App Logo"
+            android:src="@drawable/wittykeysdarkwbg"
+            android:layout_marginEnd="8dp"
+            android:visibility="gone"
+            app:tint="@android:color/white" />
+
+        <ImageView
+            android:id="@+id/toolbar_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="Back Button"
+            android:src="@drawable/back_v2_icon"
+            android:layout_marginEnd="12dp"
+            android:visibility="gone"
+            app:tint="@color/third_app_color" />
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/third_app_color"
+            android:textStyle="bold"
+            />
+        <ImageView
+            android:id="@+id/toolbar_user_icon_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="User Icon"
+            android:src="@drawable/user_icon"
+            android:visibility="gone"
+            app:tint="@android:color/white" />
+
+        <TextView
+            android:id="@+id/toolbar_user_id_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="User ID"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/toolbar_content_end"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:backgroundTint="@color/secondary_app_color"
+        android:layout_marginHorizontal="10dp"
+        >
+
+        <ImageView
+            android:id="@+id/toolbar_settings_icon"
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:contentDescription="Settings Icon"
+            android:src="@drawable/settings_icon"
+            android:layout_marginHorizontal="12dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="gone"
+            app:tint="@android:color/white" />
+
+        <ImageView
+            android:id="@+id/toolbar_user_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="User Icon"
+            android:src="@drawable/user_icon"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="gone"
+            app:tint="@android:color/white" />
+
+        <TextView
+            android:id="@+id/toolbar_end_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="End Text"
+            android:textColor="@android:color/white"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</androidx.appcompat.widget.Toolbar>

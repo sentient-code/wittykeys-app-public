@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="6dp"
+    android:gravity="start">
+
+    <!-- 📷 Avatar -->
+    <TextView
+        android:id="@+id/analyzing_avatar"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:text="📷"
+        android:textSize="12sp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginTop="2dp" />
+
+    <!-- Analyzing bubble -->
+    <LinearLayout
+        android:id="@+id/analyzing_bubble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="16dp"
+        android:background="@drawable/wk_analyzing_bubble_bg">
+
+        <!-- "Analyzing screenshot..." text -->
+        <TextView
+            android:id="@+id/analyzing_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Analyzing screenshot..."
+            android:textSize="12sp"
+            android:textColor="#8A8A96"
+            android:layout_marginEnd="8dp" />
+
+        <!-- Animated dots container -->
+        <LinearLayout
+            android:id="@+id/analyzing_dots_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <View
+                android:id="@+id/analyzing_dot_1"
+                android:layout_width="4dp"
+                android:layout_height="4dp"
+                android:layout_marginEnd="3dp"
+                android:background="@drawable/wk_analyzing_dot" />
+
+            <View
+                android:id="@+id/analyzing_dot_2"
+                android:layout_width="4dp"
+                android:layout_height="4dp"
+                android:layout_marginEnd="3dp"
+                android:background="@drawable/wk_analyzing_dot" />
+
+            <View
+                android:id="@+id/analyzing_dot_3"
+                android:layout_width="4dp"
+                android:layout_height="4dp"
+                android:background="@drawable/wk_analyzing_dot" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

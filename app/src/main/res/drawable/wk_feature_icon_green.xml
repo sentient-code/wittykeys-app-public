@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Feature icon bg: green rgba(74,222,128,0.12) -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="#1F4ADE80" />
+    <corners android:radius="@dimen/wk_feature_icon_radius" />
+</shape>

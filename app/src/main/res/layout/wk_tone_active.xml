@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Task 2.11: Tone Active Row Layout - Pinned chip + suggestions + regen -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingStart="4dp"
+    android:paddingEnd="4dp">
+
+    <!-- Pinned Tone Chip (with ✕ close) -->
+    <LinearLayout
+        android:id="@+id/pinned_tone_container"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/wk_chip_height"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/wk_chip_padding_h"
+        android:paddingEnd="8dp"
+        android:background="@drawable/wk_chip_default"
+        android:layout_marginEnd="@dimen/wk_row2_chip_gap">
+
+        <TextView
+            android:id="@+id/pinned_tone_chip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="😎 Casual"
+            android:textSize="@dimen/wk_text_chip"
+            android:textColor="@color/wk_accent"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/close_tone_active"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="6dp"
+            android:gravity="center"
+            android:text="✕"
+            android:textSize="14sp"
+            android:textColor="@color/wk_text3"
+            android:clickable="true"
+            android:focusable="true" />
+
+    </LinearLayout>
+
+    <!-- Scrolling Suggestions -->
+    <HorizontalScrollView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/tone_suggestions_container"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- Suggestion chips added programmatically -->
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <!-- 🔄 Regenerate Button -->
+    <TextView
+        android:id="@+id/regen_button"
+        android:layout_width="@dimen/wk_icon_button_size"
+        android:layout_height="@dimen/wk_icon_button_size"
+        android:layout_marginStart="4dp"
+        android:gravity="center"
+        android:text="🔄"
+        android:textSize="18sp"
+        android:clickable="true"
+        android:focusable="true"
+                android:contentDescription="@string/regenerate" />
+
+</LinearLayout>

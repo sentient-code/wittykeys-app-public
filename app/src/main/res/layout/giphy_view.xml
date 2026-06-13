@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.giphy.sdk.ui.views.GiphyGridView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/giphy_grid_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:gphDirection="vertical"
+    app:gphSpanCount="2"
+    app:gphCellPadding="4dp"
+    app:gphShowCheckeredBackground="false" />

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Task 2.16: Stat Cards Layout - Horizontal pill cards matching reference -->
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:id="@+id/stat_cards_container"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp">
+
+        <!-- ⚡ Keystrokes Saved -->
+        <LinearLayout
+            android:id="@+id/stat_keystrokes"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/wk_chip_height"
+            android:layout_marginEnd="@dimen/wk_row2_chip_gap"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/wk_chip_default"
+            android:paddingStart="@dimen/wk_chip_padding_h"
+            android:paddingEnd="@dimen/wk_chip_padding_h">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⚡"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/stat_keystrokes_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="2.3k"
+                android:textSize="@dimen/wk_text_stat_number"
+                android:textColor="@color/wk_stat_blue"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="KEYSTROKES"
+                android:textSize="@dimen/wk_text_stat_label"
+                android:textColor="@color/wk_text3"
+                android:textStyle="bold"
+                android:letterSpacing="0.05" />
+
+        </LinearLayout>
+
+        <!-- 💬 Replies Sent -->
+        <LinearLayout
+            android:id="@+id/stat_replies"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/wk_chip_height"
+            android:layout_marginEnd="@dimen/wk_row2_chip_gap"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/wk_chip_default"
+            android:paddingStart="@dimen/wk_chip_padding_h"
+            android:paddingEnd="@dimen/wk_chip_padding_h">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="💬"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/stat_replies_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="47"
+                android:textSize="@dimen/wk_text_stat_number"
+                android:textColor="@color/wk_stat_green"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="REPLIES"
+                android:textSize="@dimen/wk_text_stat_label"
+                android:textColor="@color/wk_text3"
+                android:textStyle="bold"
+                android:letterSpacing="0.05" />
+
+        </LinearLayout>
+
+        <!-- 🔥 Streak Days -->
+        <LinearLayout
+            android:id="@+id/stat_streak"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/wk_chip_height"
+            android:layout_marginEnd="@dimen/wk_row2_chip_gap"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/wk_chip_default"
+            android:paddingStart="@dimen/wk_chip_padding_h"
+            android:paddingEnd="@dimen/wk_chip_padding_h">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🔥"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/stat_streak_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="7"
+                android:textSize="@dimen/wk_text_stat_number"
+                android:textColor="@color/wk_stat_orange"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="STREAK"
+                android:textSize="@dimen/wk_text_stat_label"
+                android:textColor="@color/wk_text3"
+                android:textStyle="bold"
+                android:letterSpacing="0.05" />
+
+        </LinearLayout>
+
+        <!-- ⏱ Time Saved -->
+        <LinearLayout
+            android:id="@+id/stat_time"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/wk_chip_height"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/wk_chip_default"
+            android:paddingStart="@dimen/wk_chip_padding_h"
+            android:paddingEnd="@dimen/wk_chip_padding_h">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⏱"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/stat_time_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="12m"
+                android:textSize="@dimen/wk_text_stat_number"
+                android:textColor="@color/wk_stat_pink"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="TIME SAVED"
+                android:textSize="@dimen/wk_text_stat_label"
+                android:textColor="@color/wk_text3"
+                android:textStyle="bold"
+                android:letterSpacing="0.05" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</HorizontalScrollView>

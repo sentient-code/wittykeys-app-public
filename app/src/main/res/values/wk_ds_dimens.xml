@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Touch targets -->
+    <dimen name="wk_ds_touch_min">44dp</dimen>
+    <dimen name="wk_ds_icon_btn">36dp</dimen>
+    <dimen name="wk_ds_icon_btn_inner">18dp</dimen>
+
+    <!-- Bubble -->
+    <dimen name="wk_ds_bubble_max_width">260dp</dimen>
+    <dimen name="wk_ds_bubble_padding_h">12dp</dimen>
+    <dimen name="wk_ds_bubble_padding_v">8dp</dimen>
+    <dimen name="wk_ds_bubble_gap">6dp</dimen>
+
+    <!-- Input bar -->
+    <dimen name="wk_ds_input_pill_min_height">36dp</dimen>
+    <dimen name="wk_ds_input_pill_max_height">80dp</dimen>
+    <dimen name="wk_ds_input_pill_padding_h">14dp</dimen>
+    <dimen name="wk_ds_input_pill_padding_v">8dp</dimen>
+    <dimen name="wk_ds_input_bar_padding_h">10dp</dimen>
+    <dimen name="wk_ds_input_bar_padding_top">6dp</dimen>
+    <dimen name="wk_ds_input_bar_padding_bottom">8dp</dimen>
+
+    <!-- Session card -->
+    <dimen name="wk_ds_session_card_padding">12dp</dimen>
+    <dimen name="wk_ds_session_card_gap">4dp</dimen>
+
+    <!-- Source tag -->
+    <dimen name="wk_ds_source_tag_padding_h">6dp</dimen>
+    <dimen name="wk_ds_source_tag_padding_v">2dp</dimen>
+    <dimen name="wk_ds_source_tag_text">10sp</dimen>
+
+    <!-- Header -->
+    <dimen name="wk_ds_header_height">48dp</dimen>
+    <dimen name="wk_ds_header_padding_h">8dp</dimen>
+    <dimen name="wk_ds_strip_mini_header_height">32dp</dimen>
+
+    <!-- Empty state -->
+    <dimen name="wk_ds_empty_icon">48dp</dimen>
+    <dimen name="wk_ds_empty_gap">8dp</dimen>
+
+    <!-- Dual CTA row -->
+    <dimen name="wk_ds_cta_height">40dp</dimen>
+    <dimen name="wk_ds_cta_gap">8dp</dimen>
+</resources>

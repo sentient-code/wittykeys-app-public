@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Night mode overrides for colour resources. -->
+<resources>
+    <!-- Override the functional text colour alias for system shift icons to use the dark
+         theme's functional text colour. This ensures the shift icon adopts an appropriate
+         contrast in dark themes. -->
+    <color name="key_functional_text_color_lxx_system">@color/key_functional_text_color_lxx_dark</color>
+
+    <!-- System theme auto-switching colors (dark mode overrides) -->
+    <color name="background_lxx_system_auto">@color/background_lxx_dark</color>
+    <color name="key_text_color_lxx_system_auto">@color/key_text_color_lxx_dark</color>
+    <color name="key_text_inactive_color_lxx_system_auto">@color/key_text_inactive_color_lxx_dark</color>
+    <color name="key_functional_text_color_lxx_system_auto">@color/key_functional_text_color_lxx_dark</color>
+    <color name="key_hint_letter_color_lxx_system_auto">@color/key_hint_letter_color_lxx_dark</color>
+
+    <!-- Additional auto-switching colors for MainKeyboardView to match Material Dark -->
+    <color name="sliding_key_input_preview_color_lxx_system_auto">@color/sliding_key_input_preview_color_lxx_dark</color>
+    <color name="language_on_spacebar_text_color_lxx_system_auto">@color/key_text_inactive_color_lxx_dark</color>
+
+    <!-- Auto-switching colors for ProductView / UtilityRow / themed buttons -->
+    <color name="product_view_title_bg_lxx_system_auto">#1E1E1E</color>
+    <color name="themed_button_bg_lxx_system_auto">#1E1E1E</color>
+    <color name="utility_row_separator_lxx_system_auto">#40FFFFFF</color>
+    <color name="themed_button_pressed_lxx_system_auto">@color/key_background_pressed_lxx_dark</color>
+
+    <!-- Auto-switching colors for AI Chat bubble theming (dark mode) -->
+    <color name="chat_user_bubble_lxx_system_auto">#1B6930</color>
+    <color name="chat_ai_bubble_lxx_system_auto">#E8E8EC</color>
+    <color name="chat_cta_chip_lxx_system_auto">#2A2A30</color>
+    <color name="chat_input_area_lxx_system_auto">#1A1A1A</color>
+</resources>

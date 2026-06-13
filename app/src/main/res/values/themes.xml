@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.WittyKeys" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary_app_color</item>
+        <item name="colorPrimaryVariant">@color/third_app_color</item>
+        <item name="colorOnPrimary">@color/secondary_app_color</item>
+        <item name="colorSecondary">@color/third_app_color</item>
+        <item name="colorSecondaryVariant">@color/fifth_app_color</item>
+        <item name="colorOnSecondary">@color/fifth_app_color</item>
+        <item name="android:statusBarColor">@color/primary_app_color</item>
+        <item name="wkText">@color/wk_text</item>
+
+    </style>
+
+    <!-- No-ActionBar variant for OnboardingActivity (dark fullscreen) -->
+    <style name="Theme.WittyKeys.NoActionBar" parent="Theme.WittyKeys">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:statusBarColor">@color/wk_ob_bg</item>
+        <item name="android:navigationBarColor">@color/wk_ob_bg</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.WittyKeys.Button.Circle" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">25%</item>
+    </style>
+
+    <style name="listItemStyle" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingVertical">12dp</item>
+        <item name="android:textColor">?attr/colorOnSurfaceVariant</item>
+        <item name="android:drawablePadding">16dp</item>
+        <item name="android:drawableStart">@drawable/sym_keyboard_no_internet_dark</item>
+    </style>
+
+    <style name="WkSettingsRow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:background">@drawable/wk_app_card_bg</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:minHeight">72dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingHorizontal">14dp</item>
+        <item name="android:paddingVertical">12dp</item>
+    </style>
+
+    <style name="WkSettingsSectionTitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">18dp</item>
+        <item name="android:textColor">@color/wk_overlay_dark_text</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="WkAppBottomNav">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">64dp</item>
+        <item name="android:layout_marginHorizontal">16dp</item>
+        <item name="android:layout_marginBottom">20dp</item>
+        <item name="android:background">@drawable/wk_app_bottom_nav_bg</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:padding">5dp</item>
+    </style>
+
+    <style name="WkAppBottomNavItem">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:foreground">?attr/selectableItemBackgroundBorderless</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/wk_overlay_dark_text2</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="WkAppBottomNavItemActive" parent="WkAppBottomNavItem">
+        <item name="android:background">@drawable/wk_app_bottom_nav_item_active_bg</item>
+        <item name="android:textColor">@color/wk_overlay_dark_accent</item>
+    </style>
+
+    <style name="WkSettingsIconFrame">
+        <item name="android:layout_width">38dp</item>
+        <item name="android:layout_height">38dp</item>
+        <item name="android:background">@drawable/wk_app_card_quiet_bg</item>
+        <item name="android:padding">8dp</item>
+    </style>
+
+    <style name="WkSettingsIconImage">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:tint">@color/wk_overlay_dark_accent</item>
+    </style>
+
+    <style name="WkSettingsIcon">
+        <item name="android:layout_width">36dp</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:background">@drawable/wk_ob_badge_bg</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/wk_overlay_dark_accent</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="WkSettingsCopy">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">12dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="WkSettingsTitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/wk_overlay_dark_text</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="WkSettingsSubtitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">3dp</item>
+        <item name="android:textColor">@color/wk_overlay_dark_text2</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="WkSettingsChevron">
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/wk_overlay_dark_text2</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="WkSettingsValue">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="android:background">@drawable/wk_app_card_quiet_bg</item>
+        <item name="android:gravity">center</item>
+        <item name="android:minWidth">58dp</item>
+        <item name="android:paddingHorizontal">10dp</item>
+        <item name="android:textColor">@color/wk_overlay_dark_accent</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="BottomSheetDialogTheme_FullHeight" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetStyle_FullHeight</item>
+    </style>
+
+    <style name="BottomSheetStyle_FullHeight" parent="Widget.Design.BottomSheet.Modal">
+        <item name="behavior_peekHeight">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <!-- Dialog theme for PermissionDisclosureDialog -->
+    <style name="Theme.WittyKeys.Dialog" parent="Theme.MaterialComponents.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <!-- Bottom sheet style for MemoryViewModal (Phase 5) -->
+    <style name="Theme.WittyKeys.BottomSheet" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="bottomSheetStyle">@style/Widget.WittyKeys.BottomSheet</item>
+    </style>
+
+    <style name="Widget.WittyKeys.BottomSheet" parent="Widget.MaterialComponents.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.WittyKeys.BottomSheet</item>
+    </style>
+
+    <style name="ShapeAppearance.WittyKeys.BottomSheet" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">16dp</item>
+        <item name="cornerSizeTopRight">16dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+    </style>
+</resources>

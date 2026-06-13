@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:background="@drawable/wk_stat_card_bg"
+    android:paddingTop="@dimen/wk_stat_card_padding_vertical"
+    android:paddingBottom="@dimen/wk_stat_card_padding_vertical"
+    android:paddingStart="@dimen/wk_stat_card_padding_horizontal"
+    android:paddingEnd="@dimen/wk_stat_card_padding_horizontal"
+    android:layout_marginEnd="@dimen/wk_stats_cards_gap">
+
+    <TextView
+        android:id="@+id/wk_stat_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/wk_stat_icon_size"/>
+
+    <TextView
+        android:id="@+id/wk_stat_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/wk_stat_card_gap"
+        android:textSize="@dimen/wk_stat_number_size"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-medium"
+        android:letterSpacing="-0.03"/>
+    <!-- Color set programmatically: accent/green/orange/pink -->
+
+    <TextView
+        android:id="@+id/wk_stat_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/wk_stat_card_gap"
+        android:textSize="@dimen/wk_stat_label_size"
+        android:textColor="@color/wk_text3"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-medium"
+        android:letterSpacing="0.03"
+        android:textAllCaps="true"/>
+</LinearLayout>

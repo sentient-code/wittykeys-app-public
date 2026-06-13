@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Copyright (C) 2012 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" tools:node="remove" />
+    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_ATTRIBUTION" tools:node="remove" />
+    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_AD_ID" tools:node="remove" />
+    <application
+        android:name=".app.MyApplication"
+        android:allowBackup="false"
+        android:fullBackupOnly="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/english_ime_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="false">
+
+        <meta-data
+            android:name="google_analytics_adid_collection_enabled"
+            android:value="false" />
+        <meta-data
+            android:name="google_analytics_default_allow_ad_personalization_signals"
+            android:value="false" />
+        <property
+            android:name="android.adservices.AD_SERVICES_CONFIG"
+            tools:node="remove" />
+
+        <service
+            android:name=".latin.LatinIME"
+            android:directBootAware="true"
+            android:exported="false"
+            android:label="@string/english_ime_name"
+            android:permission="android.permission.BIND_INPUT_METHOD">
+            <intent-filter>
+                <action android:name="android.view.InputMethod" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.view.im"
+                android:resource="@xml/method" />
+        </service>
+        <service
+            android:name=".app.helpers.ScreenReaderAccessibility"
+            android:exported="true"
+            android:label="@string/accessibility_service_label"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/accessibility_service_config" />
+        </service>
+        <!-- NotificationListenerService (Sprint 1 — Build 7.0) -->
+        <service
+            android:name=".app.helpers.WittyKeysNotificationListenerService"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".app.helpers.CommunicationService"
+            android:exported="false" />
+        <!-- Screen Capture Service (Java version) -->
+        <service
+            android:name=".app.helpers.ScreenCaptureService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="mediaProjection" />
+
+        <!-- Overlay Service (Build 7.1 MVP) -->
+        <service
+            android:name=".app.overlay.WittyKeysOverlayService"
+            android:exported="false"
+            android:foregroundServiceType="specialUse">
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="overlay_ai_assistant" />
+        </service>
+
+        <!-- Transparent Helper Activity for Permissions (Java version) -->
+        <activity
+            android:name=".app.helpers.ScreenshotPermissionActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:taskAffinity=""
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <activity
+            android:name=".app.EntranceActivity"
+            android:exported="true"
+            android:label="@string/english_ime_name"
+            android:theme="@style/Theme.WittyKeys">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".app.IntroActivity"
+            android:theme="@style/Theme.WittyKeys"></activity>
+        <activity
+            android:name=".app.SetUpKeyboardActivity"
+            android:theme="@style/Theme.WittyKeys"></activity>
+        <activity
+            android:name=".app.HomeActivity"
+            android:theme="@style/Theme.WittyKeys">
+        </activity>
+        <activity
+            android:name=".app.AuthenticationActivity"
+            android:theme="@style/Theme.WittyKeys"></activity>
+        <activity
+            android:name=".app.SubscriptionListingActivity"
+            android:theme="@style/Theme.WittyKeys"
+            android:windowSoftInputMode="adjustResize"></activity>
+        <activity
+            android:name=".app.AboutUsActivity"
+            android:theme="@style/Theme.WittyKeys"></activity>
+        <activity
+            android:name=".app.UserProfileActivity"
+            android:theme="@style/Theme.WittyKeys"></activity>
+        <activity
+            android:name=".app.settings.SettingsHubActivity"
+            android:theme="@style/Theme.WittyKeys"></activity>
+        <activity
+            android:name=".app.launch.LaunchStateActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.WittyKeys.NoActionBar"></activity>
+        <activity
+            android:name=".latin.settings.SettingsActivity"
+            android:label="@string/english_ime_settings"
+            android:theme="@style/platformSettingsTheme" />
+        <activity
+            android:name=".app.AccessibilityConsentActivity"
+            android:theme="@style/Theme.WittyKeys" />
+
+        <activity
+            android:name=".keyboard.AiChat.AiChatActivity"
+            android:theme="@style/Theme.WittyKeys"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="false" />
+
+        <activity
+            android:name=".app.tutorial.InteractiveTutorialActivity"
+            android:label="Tutorial"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:theme="@style/Theme.WittyKeys"
+            android:exported="false"
+            />
+
+        <!-- Build 7.1 value-first onboarding -->
+        <activity
+            android:name=".app.tutorial.OnboardingActivity"
+            android:theme="@style/Theme.WittyKeys.NoActionBar"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"
+            android:exported="false" />
+
+        <service
+            android:name=".app.helpers.NotificationService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <receiver
+            android:name=".latin.SystemBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.LOCALE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".ui.chat.preview.WkDsPreviewActivity"
+            android:exported="false"
+            android:theme="@style/Theme.WittyKeys" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <!-- THIS IS THE CRITICAL PART THAT IS LIKELY MISSING OR MISPLACED -->
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+
+        </provider>
+
+    </application>
+
+</manifest>

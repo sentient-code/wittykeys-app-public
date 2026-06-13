@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- State list drawable for modern spacebar backgrounds in light theme -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Pressed state uses pressed background (reuse functional pressed for consistency) -->
+    <item android:state_pressed="true" android:drawable="@drawable/modern_key_functional_shape_pressed_lxx_light" />
+    <!-- Default state uses spacebar background -->
+    <item android:drawable="@drawable/modern_spacebar_shape_lxx_light" />
+</selector>

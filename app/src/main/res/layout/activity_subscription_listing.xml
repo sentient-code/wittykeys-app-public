@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wk_app_shell_bg">
+
+    <LinearLayout
+        android:id="@+id/main_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/wk_app_shell_bg"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/coupon_code_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/subscription_topbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="72dp"
+            android:orientation="horizontal"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="18dp">
+
+            <ImageButton
+                android:id="@+id/subscription_back_button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/wk_icon_btn_bg"
+                android:contentDescription="Back"
+                android:padding="12dp"
+                android:src="@drawable/ic_arrow_back"
+                app:tint="@color/wk_overlay_dark_text" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="WittyKeys Plus"
+                    android:textColor="@color/wk_overlay_dark_text"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Google Play billing"
+                    android:textColor="@color/wk_overlay_dark_text2"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/wk_logo_rounded_square_bg"
+                android:clipToOutline="true"
+                android:contentDescription="WittyKeys logo"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_witty_logo" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/subscription_hero_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/wk_app_card_elevated_bg"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SB01"
+                android:textColor="@color/wk_overlay_dark_accent"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Use more AI when WittyKeys becomes daily."
+                android:textColor="@color/wk_overlay_dark_text"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Free stays useful. Plus exists for heavier AI users so the product remains sustainable."
+                android:textColor="@color/wk_overlay_dark_text2"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="More AI credits for heavier use."
+                android:textColor="@color/wk_overlay_dark_text2"
+                android:textSize="13sp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="124dp"
+                android:layout_marginTop="18dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/wk_app_card_quiet_bg"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Free"
+                        android:textColor="@color/wk_overlay_dark_text"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_weight="1"
+                        android:text="Daily essentials stay useful without sign-in."
+                        android:textColor="@color/wk_overlay_dark_text2"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="20 credits"
+                        android:textColor="@color/wk_overlay_dark_text"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/wk_app_card_hero_bg"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Plus"
+                        android:textColor="@color/wk_overlay_dark_text"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_weight="1"
+                        android:text="For heavier screen AI, chat, and reply usage."
+                        android:textColor="@color/wk_overlay_dark_text2"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="More AI"
+                        android:textColor="@color/wk_overlay_dark_accent"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="✓  Upgrade only after value is clear"
+                android:textColor="@color/wk_overlay_dark_text2"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="✓  Credit limits protect product cost"
+                android:textColor="@color/wk_overlay_dark_text2"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer_subscription_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="24dp">
+
+                <View
+                    android:layout_width="240dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/shimmer_rounded_corner_background"
+                    android:backgroundTint="@color/wk_overlay_dark_surface2" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/shimmer_rounded_corner_background"
+                    android:backgroundTint="@color/wk_overlay_dark_surface2" />
+
+            </LinearLayout>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="4dp">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/subscription_tabs"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@drawable/wk_subscription_plan_tabs_bg"
+                android:padding="5dp"
+                app:tabBackground="@android:color/transparent"
+                app:tabGravity="fill"
+                app:tabIndicator="@drawable/wk_subscription_plan_tab_indicator"
+                app:tabIndicatorFullWidth="true"
+                app:tabIndicatorGravity="center"
+                app:tabIndicatorHeight="42dp"
+                app:tabMode="fixed"
+                app:tabRippleColor="@color/wk_overlay_accent_glow2"
+                app:tabSelectedTextColor="@color/wk_overlay_dark_accent"
+                app:tabTextAppearance="@style/TextAppearance.MaterialComponents.Button"
+                app:tabTextColor="@color/wk_overlay_dark_text2"
+                app:tabUnboundedRipple="false" />
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/subscription_pager"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/coupon_code_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/wk_app_shell_bg"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingHorizontal="14dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+
+        <LinearLayout
+            android:id="@+id/promo_code_panel"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@drawable/wk_app_search_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/coupon_code_edit_text"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:hint="Enter promo code"
+                android:imeOptions="actionDone"
+                android:includeFontPadding="false"
+                android:inputType="textCapCharacters|textNoSuggestions"
+                android:maxLines="1"
+                android:paddingStart="16dp"
+                android:paddingEnd="10dp"
+                android:singleLine="true"
+                android:textSize="15sp"
+                android:textColor="@color/wk_overlay_dark_text"
+                android:textColorHint="@color/wk_overlay_dark_text3" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/apply_coupon_button"
+                android:layout_width="92dp"
+                android:layout_height="44dp"
+                android:layout_marginEnd="10dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:paddingHorizontal="14dp"
+                android:text="Apply"
+                android:textAllCaps="false"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/wk_overlay_dark_accent"
+                android:textStyle="bold"
+                app:backgroundTint="@color/wk_overlay_accent_glow2"
+                app:cornerRadius="18dp"
+                app:strokeColor="@color/wk_overlay_dark_accent"
+                app:strokeWidth="1dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/coupon_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="6dp"
+            android:gravity="start"
+            android:textSize="12dp"
+            android:text="Some extra information for the user."
+            android:textColor="@color/wk_overlay_dark_text2"
+            android:visibility="gone" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/subscribe_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/wk_overlay_dark_accent"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="Upgrade with Play"
+            android:textAllCaps="false"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/primary_app_color"
+            android:textStyle="bold"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.WittyKeys.Button.Circle" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/loading_overlay_subscription"
+        layout="@layout/loading_overlay" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

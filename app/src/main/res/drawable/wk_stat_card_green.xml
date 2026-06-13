@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Stat card background: Replies (Green) -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/wk_stat_green_bg" />
+    <corners android:radius="@dimen/wk_stat_card_radius" />
+</shape>

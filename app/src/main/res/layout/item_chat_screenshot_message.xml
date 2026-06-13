@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingStart="80dp"
+    android:paddingEnd="10dp"
+    android:paddingTop="3dp"
+    android:paddingBottom="3dp"
+    android:gravity="end">
+
+    <!-- Screenshot card (user message, right-aligned) -->
+    <LinearLayout
+        android:id="@+id/screenshot_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:background="@drawable/wk_screenshot_card_bg">
+
+        <!-- Thumbnail -->
+        <FrameLayout
+            android:id="@+id/screenshot_thumb_container"
+            android:layout_width="200dp"
+            android:layout_height="120dp"
+            android:background="@drawable/wk_screenshot_thumb_bg">
+
+            <ImageView
+                android:id="@+id/screenshot_thumb_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:visibility="gone"
+                android:contentDescription="Screenshot thumbnail" />
+
+            <!-- Placeholder shown when image can't load -->
+            <LinearLayout
+                android:id="@+id/screenshot_thumb_placeholder"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📱"
+                    android:textSize="24sp" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <!-- Label always shown below thumbnail -->
+        <TextView
+            android:id="@+id/screenshot_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="📸 screenshot"
+            android:textSize="10sp"
+            android:textColor="#808080"
+            android:fontFamily="sans-serif-medium" />
+
+    </LinearLayout>
+</LinearLayout>

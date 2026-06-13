@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingStart="10dp"
+    android:paddingEnd="80dp"
+    android:paddingTop="3dp"
+    android:paddingBottom="3dp">
+
+    <!-- AI Avatar: hidden per design (no avatar on AI messages) -->
+    <TextView
+        android:id="@+id/ai_avatar"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginTop="2dp"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:background="@drawable/bg_ai_avatar"
+        android:text="\uD83E\uDD16"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- DS AI Bubble (WkAiBubble) -->
+        <project.witty.keys.ui.chat.WkAiBubble
+            android:id="@+id/ai_message_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/ai_message_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="2dp"
+            android:textSize="9sp"
+            android:textColor="?attr/productViewTitleColor"
+            android:alpha="0.5"
+            android:fontFamily="sans-serif" />
+
+        <!-- CTA Chip Row -->
+        <LinearLayout
+            android:id="@+id/cta_button_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="start|center_vertical"
+            android:paddingTop="4dp"
+            android:paddingBottom="2dp">
+
+            <TextView
+                android:id="@+id/cta_button_1"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:gravity="center"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:background="@drawable/bg_cta_chip"
+                android:textSize="10sp"
+                android:fontFamily="sans-serif-medium"
+                android:text="\uD83D\uDCCB Copy"
+                android:textAllCaps="false"
+                android:layout_marginEnd="4dp"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:clickable="true"
+                android:focusable="true"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/cta_button_2"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:visibility="gone"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/cta_button_3"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:visibility="gone"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/cta_button_report"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:gravity="center"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:background="@drawable/bg_cta_chip"
+                android:textSize="10sp"
+                android:fontFamily="sans-serif-medium"
+                android:text="\uD83D\uDEA9 Report"
+                android:textAllCaps="false"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:contentDescription="Report this AI-generated content"
+                tools:ignore="TouchTargetSizeCheck" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

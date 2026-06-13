@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <!-- This color will be overridden by our theming, but it's good to have a default -->
+    <solid android:color="@android:color/darker_gray" />
+    <!-- Reduce corner radius for a squarer pill appearance -->
+    <corners android:radius="12dp" />
+</shape>

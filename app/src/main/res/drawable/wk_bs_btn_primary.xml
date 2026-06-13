@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Primary button bg: gradient 135deg accent -> #5AA0D8, 14dp radius per mockup -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <gradient
+        android:startColor="@color/wk_accent"
+        android:endColor="#5AA0D8"
+        android:angle="135" />
+    <corners android:radius="@dimen/wk_bs_btn_radius" />
+</shape>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp">
+
+    <LinearLayout
+        android:id="@+id/wk_mv_reply_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/wk_mv_reply_card_bg"
+        android:paddingTop="@dimen/wk_mv_reply_padding_vertical"
+        android:paddingBottom="@dimen/wk_mv_reply_padding_vertical"
+        android:paddingStart="@dimen/wk_mv_reply_padding_horizontal"
+        android:paddingEnd="@dimen/wk_mv_reply_padding_horizontal"
+        android:clickable="true"
+        android:focusable="true">
+
+        <!-- Reply text (ellipsis, single line) -->
+        <TextView
+            android:id="@+id/wk_mv_reply_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/wk_mv_reply_text_size"
+            android:textColor="@color/wk_text"
+            android:fontFamily="sans-serif-medium"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+
+        <!-- Hinglish badge (GONE unless Hinglish reply) -->
+        <TextView
+            android:id="@+id/wk_mv_reply_hinglish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="HI"
+            android:background="@drawable/wk_hinglish_badge_bg"
+            android:paddingTop="@dimen/wk_hinglish_badge_padding_vertical"
+            android:paddingBottom="@dimen/wk_hinglish_badge_padding_vertical"
+            android:paddingStart="@dimen/wk_hinglish_badge_padding_horizontal"
+            android:paddingEnd="@dimen/wk_hinglish_badge_padding_horizontal"
+            android:textSize="@dimen/wk_hinglish_badge_text_size"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:letterSpacing="0.03"
+            android:visibility="gone"/>
+
+        <!-- Flag icon (🚩) -->
+        <TextView
+            android:id="@+id/wk_mv_reply_flag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/wk_mv_reply_gap"
+            android:text="🚩"
+            android:textSize="@dimen/wk_mv_reply_flag_size"
+            android:alpha="0.2"
+            android:clickable="true"
+            android:focusable="true"/>
+    </LinearLayout>
+
+    <!-- Check mark overlay (shown on tap animation) -->
+    <TextView
+        android:id="@+id/wk_mv_reply_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="✓"
+        android:textSize="18sp"
+        android:textColor="@color/wk_green"
+        android:alpha="0"
+        android:visibility="invisible"/>
+</FrameLayout>

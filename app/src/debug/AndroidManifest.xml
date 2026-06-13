@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Debug-only AndroidManifest.xml
+    Merged with main manifest only in debug builds.
+    Contains test harness Activities that NEVER ship to production.
+
+    WittyKeys Automated Visual QA & Log Analysis Testing System
+    Created: February 9, 2026
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Storage permissions for test artifact collection (screenshots + logs) -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- Android 11+ scoped storage bypass for test data -->
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+
+    <application>
+        <!--
+            InteractiveTutorialActivity — exported in debug builds only
+            for ADB launch testing of mode detection (onboarding, e2e_test, quality_score).
+        -->
+        <activity
+            android:name="project.witty.keys.app.tutorial.InteractiveTutorialActivity"
+            android:exported="true"
+            tools:replace="android:exported" />
+
+        <!--
+            SmartAssistantBarTestActivity
+            Debug-only Activity that hosts SmartAssistantBar in isolation
+            for automated visual testing and journey testing.
+
+            Launch via ADB:
+            adb shell am start -n project.witty.keys/.debug.SmartAssistantBarTestActivity
+
+            With extras:
+            adb shell am start -n project.witty.keys/.debug.SmartAssistantBarTestActivity \
+                - -es bar_state "EXPANDED" \
+                - -es row2_state "MEMORY_VIEW" \
+                - -ei theme_id 7 \
+                - -es scenario "FRUSTRATED_BOSS"
+        -->
+        <activity
+            android:name="project.witty.keys.debug.SmartAssistantBarTestActivity"
+            android:exported="false"
+            android:label="SAB Test Harness"
+            android:theme="@style/KeyboardTheme.LXX_System"
+            android:showWhenLocked="true"
+            android:turnScreenOn="true" />
+
+        <activity
+            android:name="project.witty.keys.debug.LaunchStateActivity"
+            android:exported="false"
+            android:label="Launch State Harness"
+            android:theme="@style/Theme.WittyKeys.NoActionBar"
+            android:screenOrientation="portrait"
+            android:showWhenLocked="true"
+            android:turnScreenOn="true" />
+
+    </application>
+
+</manifest>

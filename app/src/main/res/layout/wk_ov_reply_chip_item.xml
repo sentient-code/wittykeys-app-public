@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/wk_row2_gap">
+
+    <LinearLayout
+        android:id="@+id/wk_ov_chip"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/wk_reply_chip_bg"
+        android:minHeight="@dimen/wk_chip_min_height"
+        android:paddingTop="@dimen/wk_chip_padding_vertical"
+        android:paddingBottom="@dimen/wk_chip_padding_vertical"
+        android:paddingStart="@dimen/wk_chip_padding_horizontal"
+        android:paddingEnd="@dimen/wk_chip_padding_horizontal"
+        android:clickable="true"
+        android:focusable="true">
+
+        <!-- Tone color bar (2dp left border — set programmatically via LayerDrawable or View) -->
+        <!-- Handled via: chip.setBackgroundResource(toneChipDrawable) when tone is active -->
+
+        <TextView
+            android:id="@+id/wk_ov_chip_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/wk_chip_text_size"
+            android:textColor="@color/wk_text"
+            android:fontFamily="sans-serif-medium"
+            android:singleLine="true"/>
+
+        <!-- Hinglish badge (GONE unless Hinglish) -->
+        <TextView
+            android:id="@+id/wk_ov_chip_hinglish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:text="HI"
+            android:background="@drawable/wk_hinglish_badge_bg"
+            android:paddingTop="@dimen/wk_hinglish_badge_padding_vertical"
+            android:paddingBottom="@dimen/wk_hinglish_badge_padding_vertical"
+            android:paddingStart="@dimen/wk_hinglish_badge_padding_horizontal"
+            android:paddingEnd="@dimen/wk_hinglish_badge_padding_horizontal"
+            android:textSize="@dimen/wk_hinglish_badge_text_size"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:visibility="gone"/>
+
+        <!-- Action indicator (flag icon) -->
+        <TextView
+            android:id="@+id/wk_ov_chip_flag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:text="►"
+            android:textSize="10sp"
+            android:textColor="@color/wk_red"
+            android:alpha="0.7"/>
+    </LinearLayout>
+
+    <!-- Check overlay -->
+    <TextView
+        android:id="@+id/wk_ov_chip_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="✓"
+        android:textSize="18sp"
+        android:textColor="@color/wk_green"
+        android:alpha="0"
+        android:visibility="invisible"/>
+</FrameLayout>

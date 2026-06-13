@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="wk_ds_input_hint_default">Ask anything…</string>
+    <string name="wk_ds_input_hint_followup">Follow up…</string>
+    <string name="wk_ds_input_hint_waiting">Waiting for AI…</string>
+    <string name="wk_ds_send_cd">Send</string>
+    <string name="wk_ds_capture_cd">Share screenshot</string>
+    <string name="wk_ds_close_cd">Close</string>
+    <string name="wk_ds_back_cd">Back</string>
+    <string name="wk_ds_sessions_cd">Sessions</string>
+    <string name="wk_ds_new_chat">New chat</string>
+    <string name="wk_ds_error_retry">⚠ Could not reach AI. Retry</string>
+    <string name="wk_ds_source_kbd">kbd</string>
+    <string name="wk_ds_source_ovr">overlay</string>
+    <string name="wk_ds_source_fs">fullscreen</string>
+    <string name="wk_ds_empty_sessions_title">No chats yet</string>
+    <string name="wk_ds_empty_sessions_sub">Start a chat or share a screenshot.</string>
+</resources>
