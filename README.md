@@ -7,6 +7,8 @@ This repository is a sanitized public showcase copy. Production secrets, keystor
 ## Live Product
 
 - Google Play: https://play.google.com/store/apps/details?id=project.witty.keys
+- Website: https://wittykeys.com
+- Case study: https://wittykeys.com/abhishek/case-studies/wittykeys
 - Portfolio: https://wittykeys.com/abhishek
 
 ## What It Demonstrates
